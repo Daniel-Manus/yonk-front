@@ -12,10 +12,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_cookieuniversalnuxt_7e85e501 from 'nuxt_plugin_cookieuniversalnuxt_7e85e501' // Source: ./cookie-universal-nuxt.js (mode: 'all')
-import nuxt_plugin_http_9e55a852 from 'nuxt_plugin_http_9e55a852' // Source: ./http.js (mode: 'all')
-import nuxt_plugin_strapi_a1345714 from 'nuxt_plugin_strapi_a1345714' // Source: ./strapi.js (mode: 'all')
-import nuxt_plugin_markdownit_e401a3b4 from 'nuxt_plugin_markdownit_e401a3b4' // Source: ./markdown-it.js (mode: 'all')
+import nuxt_plugin_cookieuniversalnuxt_9daab1dc from 'nuxt_plugin_cookieuniversalnuxt_9daab1dc' // Source: ./cookie-universal-nuxt.js (mode: 'all')
+import nuxt_plugin_http_2126e1a6 from 'nuxt_plugin_http_2126e1a6' // Source: ./http.js (mode: 'all')
+import nuxt_plugin_strapi_52215285 from 'nuxt_plugin_strapi_52215285' // Source: ./strapi.js (mode: 'all')
+import nuxt_plugin_markdownit_f749bd12 from 'nuxt_plugin_markdownit_f749bd12' // Source: ./markdown-it.js (mode: 'all')
 import nuxt_plugin_uikit_47fa8f2a from 'nuxt_plugin_uikit_47fa8f2a' // Source: ../plugins/uikit.js (mode: 'client')
 
 // Component: <ClientOnly>
@@ -180,20 +180,20 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_cookieuniversalnuxt_7e85e501 === 'function') {
-    await nuxt_plugin_cookieuniversalnuxt_7e85e501(app.context, inject)
+  if (typeof nuxt_plugin_cookieuniversalnuxt_9daab1dc === 'function') {
+    await nuxt_plugin_cookieuniversalnuxt_9daab1dc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_http_9e55a852 === 'function') {
-    await nuxt_plugin_http_9e55a852(app.context, inject)
+  if (typeof nuxt_plugin_http_2126e1a6 === 'function') {
+    await nuxt_plugin_http_2126e1a6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_strapi_a1345714 === 'function') {
-    await nuxt_plugin_strapi_a1345714(app.context, inject)
+  if (typeof nuxt_plugin_strapi_52215285 === 'function') {
+    await nuxt_plugin_strapi_52215285(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_markdownit_e401a3b4 === 'function') {
-    await nuxt_plugin_markdownit_e401a3b4(app.context, inject)
+  if (typeof nuxt_plugin_markdownit_f749bd12 === 'function') {
+    await nuxt_plugin_markdownit_f749bd12(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_uikit_47fa8f2a === 'function') {
