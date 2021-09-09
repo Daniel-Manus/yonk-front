@@ -1,0 +1,30 @@
+[
+  {
+    "name": "info",
+    "path": "/info",
+    "component": "/Users/onions/Dropbox/Work/Freelance/2021-Yonkonline/code/final/my-site/frontend/pages/info.vue",
+    "chunkName": "pages/info",
+    "_name": "_2de73bab"
+  },
+  {
+    "name": "categories-slug",
+    "path": "/categories/:slug?",
+    "component": "/Users/onions/Dropbox/Work/Freelance/2021-Yonkonline/code/final/my-site/frontend/pages/categories/_slug.vue",
+    "chunkName": "pages/categories/_slug",
+    "_name": "_35a3d4d4"
+  },
+  {
+    "name": "penisfuck-slug",
+    "path": "/penisfuck/:slug?",
+    "component": "/Users/onions/Dropbox/Work/Freelance/2021-Yonkonline/code/final/my-site/frontend/pages/penisfuck/_slug.vue",
+    "chunkName": "pages/penisfuck/_slug",
+    "_name": "_3e10e670"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/onions/Dropbox/Work/Freelance/2021-Yonkonline/code/final/my-site/frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_181563a5"
+  }
+]
