@@ -1,6 +1,8 @@
 <template>
   <div class="landing">
-    <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" />
+    <client-only>
+      <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" />
+    </client-only>
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
     },
     lightIntensity: {
       type: Number,
-      default: () => 1,
+      default: 1,
     },
   },
   computed: {},

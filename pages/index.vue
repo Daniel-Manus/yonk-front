@@ -2,9 +2,7 @@
   <div>
     <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" />
     <div class="">
-      <div class="">
-        <Articles :articles="articles" />
-      </div>
+      <Articles :articles="articles" />
     </div>
   </div>
 </template>

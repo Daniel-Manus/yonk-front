@@ -1,44 +1,40 @@
 <template>
   <div :class="'three-images-' + 0" class="three-images block">
-    
-      <div :class="'col-' + block.images.length" class="three-images__image" v-for="img in block.images">
+    <div
+      v-for="(img, i) in block.images"
+      :key="i"
+      :class="'col-' + block.images.length"
+      class="three-images__image"
+    >
+      <template
+        v-if="img.ext === '.jpg' || img.ext === '.png' || img.ext === '.gif'"
+      >
+        <!-- <img :src="getStrapiMedia(img.url)" alt=""> -->
 
-
-
-        <template v-if="img.ext === '.jpg' || img.ext === '.png' || img.ext === '.gif'">
-          <!-- <img :src="getStrapiMedia(img.url)" alt=""> -->
-
-          <template v-if="img.formats.medium">
-            <img :src="getStrapiMedia(img.formats.medium.url)" alt="">
-          </template>
-
-          <template v-else>
-            <img :src="getStrapiMedia(img.url)" alt="">
-          </template>
-
+        <template v-if="img.formats.medium">
+          <img :src="getStrapiMedia(img.formats.medium.url)" alt="" />
         </template>
 
-
-        <template v-if="img.ext === '.fbx'">
-          <ThreeDee :model="img" />
+        <template v-else>
+          <img :src="getStrapiMedia(img.url)" alt="" />
         </template>
+      </template>
 
-
-      </div>
-
-
+      <template v-if="img.ext === '.fbx'">
+        <ThreeDee :model="img" />
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
-
 import { getStrapiMedia } from "../../utils/medias";
 import ThreeDee from "../ThreeDee.vue";
 
 export default {
-  name: 'ThreeImages',
+  name: "ThreeImages",
   components: {
-    ThreeDee
+    ThreeDee,
   },
   props: {
     block: {
@@ -47,24 +43,19 @@ export default {
     },
   },
   data: function () {
-    return {
-    }
+    return {};
   },
+  mounted() {},
   methods: {
-    getStrapiMedia
+    getStrapiMedia,
   },
-  mounted() {
-
-  }
-}
+};
 </script>
 
 <style lang="scss">
-
 $mp: 24px;
 
 .three-images {
-
   &__image {
     margin-right: 24px;
     display: inline-block;
@@ -105,7 +96,6 @@ $mp: 24px;
     }
 
     img {
-      
     }
 
     &:last-of-type {
@@ -113,6 +103,4 @@ $mp: 24px;
     }
   }
 }
-
-
 </style>

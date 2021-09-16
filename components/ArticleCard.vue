@@ -16,15 +16,7 @@
       <template v-else>
         <img :src="getStrapiMedia(article.image.url)" alt="">
       </template>
-      
     </template>
-
-
-    <!-- IF FBX -->
-    <!-- <template v-if="article.image.ext === '.fbx'">
-      <ThreeDee :model="article.image" />
-    </template> -->
-
   </nuxt-link>
 </template>
 
