@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue .",
     "lint:fix": "eslint --ext .js,.vue . --fix",
-    "heroku:postbuild": "nuxt start"
+    "heroku-postbuild": "nuxt build"
   },
   "dependencies": {
     "@egjs/grid": "^1.3.1",
