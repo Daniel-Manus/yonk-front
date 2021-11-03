@@ -68,8 +68,9 @@ mounted() {
       let imgs = document.querySelectorAll('.project-thumb');
       let stop = false;
 
-      imgs.forEach(img => {
+      imgs.forEach((img, i) => {
         if (img.offsetHeight < 30) {
+          console.log("🚀 ~", i, img.offsetHeight)
             stop = true;
           }
       });
@@ -77,7 +78,7 @@ mounted() {
       if (stop) {
         
         iterations++;
-        console.log("🚀 ~ file: Articles.vue ~ line 94 ~ checkIfReady ~ iterations", iterations)
+        console.log("🚀 ~ iterations", iterations)
 
         if (iterations < 1000) {
           setTimeout(() => {
