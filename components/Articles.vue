@@ -60,26 +60,36 @@ mounted() {
     onWindowResize();
 
     let iterations = 0;
+    
 
     // check if images are in already
     const checkIfReady = () => {
-      console.log('check ', iterations)
 
-      if (this.article !== null) {
+      let imgs = document.querySelectorAll('.project-thumb');
+      let stop = false;
 
-          let parent = document.querySelector('.masonry-grid')
-          grid.renderItems();
-          parent.classList.remove('hidden')
+      imgs.forEach(img => {
+        if (img.offsetHeight < 30) {
+            stop = true;
+          }
+      });
 
-      } else {
-
+      if (stop) {
+        
         iterations++;
+        console.log("🚀 ~ file: Articles.vue ~ line 94 ~ checkIfReady ~ iterations", iterations)
 
-        if (iterations < 400) {
+        if (iterations < 1000) {
           setTimeout(() => {
               checkIfReady()
           }, 2);
         }
+        
+      } else {
+
+        let parent = document.querySelector('.masonry-grid')
+        grid.renderItems();
+        parent.classList.remove('hidden')
 
       }
     }
