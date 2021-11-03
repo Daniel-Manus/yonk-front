@@ -59,7 +59,9 @@ export default {
     window.addEventListener( 'resize', onWindowResize );
     onWindowResize();
 
-    grid.renderItems();
+    setTimeout(() => {
+      grid.renderItems();
+    }, 1);
   }
 };
 </script>
