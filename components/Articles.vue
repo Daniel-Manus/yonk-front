@@ -1,5 +1,5 @@
 <template>
-  <div class="masonry-grid">
+  <div class="masonry-grid hidden">
     <template v-for="article in reversedArticles">
       <div :class="{ 'fbx': article.image.ext == '.fbx' }" class="project-thumb">
         <ArticleCard :key="article.id" :article="article" />
@@ -32,7 +32,7 @@ export default {
       return this.articles.slice().reverse();
     } 
   },
-  mounted() {
+mounted() {
     // Grid.MasonryGrid
     const grid = new MasonryGrid('.masonry-grid', {
       defaultDirection: "end",
@@ -59,9 +59,32 @@ export default {
     window.addEventListener( 'resize', onWindowResize );
     onWindowResize();
 
-    setTimeout(() => {
-      grid.renderItems();
-    }, 1);
+    let iterations = 0;
+
+    // check if images are in already
+    const checkIfReady = () => {
+      console.log('check ', iterations)
+
+      if (this.article !== null) {
+
+          let parent = document.querySelector('.masonry-grid')
+          grid.renderItems();
+          parent.classList.remove('hidden')
+
+      } else {
+
+        iterations++;
+
+        if (iterations < 400) {
+          setTimeout(() => {
+              checkIfReady()
+          }, 2);
+        }
+
+      }
+    }
+
+    checkIfReady();
   }
 };
 </script>
@@ -71,6 +94,10 @@ export default {
   .masonry-grid {
     // background: lightgray;
     margin-bottom: 10px;
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 
 .project-thumb {
