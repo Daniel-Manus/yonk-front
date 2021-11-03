@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss">
 $mp: 24px;
+
 .landing {
   width: 100vw;
   margin-left: 50%;
@@ -37,6 +38,9 @@ $mp: 24px;
   font-size: 1vw;
   color: black;
   margin-top: 71px;
-  // bordeR: 1px dashed red;
+
+  @media only screen and (max-width: 588px) {
+    height: calc(95vh - 194px);
+  }
 }
 </style>

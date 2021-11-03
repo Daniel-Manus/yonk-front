@@ -1,5 +1,5 @@
 <template>
-  <div :class="'three-dee-' + uid" class="three-dee">
+  <div :class="'three-dee-' + uid" class="three-dee-landing">
   </div>
 </template>
 
@@ -26,7 +26,9 @@ export default {
     return {
       uid: null,
       debug: false,
-      container: null
+      container: null,
+      windowW: 0,
+      mobileBreakpoint: 588,
     }
   },
   methods: {
@@ -44,8 +46,8 @@ export default {
       const rotationTarget = new THREE.Vector2();
       const mouse = new THREE.Vector2();
       const target = new THREE.Vector2();
-      let mainWidth = $this.containerTarget.offsetWidth;
-      let mainHeight = $this.containerTarget.offsetHeight;
+      let mainWidth = $this.container.offsetWidth;
+      let mainHeight = $this.container.offsetHeight;
       const windowHalf = new THREE.Vector2( mainWidth / 2, mainHeight / 2 );
       let aspectRatio = 2;
 
@@ -69,7 +71,7 @@ export default {
 
 				const container = document.createElement( 'div' );
 
-				$this.containerTarget.appendChild( container );
+				$this.container.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 25, mainWidth / mainHeight, 1, 3000 );
 
@@ -145,10 +147,11 @@ export default {
 
 
 			function onWindowResize() {
+        $this.windowW = window.innerWidth;
         aspectRatio = mainWidth / mainHeight;
         
-        mainWidth = $this.containerTarget.offsetWidth;
-        mainHeight = $this.containerTarget.offsetHeight;
+        mainWidth = $this.container.offsetWidth;
+        mainHeight = $this.container.offsetHeight;
 
         camera.position.set( 0, 0, 1800 );
 
@@ -186,7 +189,6 @@ export default {
 
 				if ( mixer ) mixer.update( delta );
 
-				// renderer.render( scene, camera );
         let renderTarget, cubeMap;
 
 				renderTarget = hdrCubeRenderTarget;
@@ -208,8 +210,13 @@ export default {
           //   fbxobject.scale.z = 0.5;
           // }
 
-          fbxobject.rotation.x += 0.05 * ( rotationTarget.y - fbxobject.rotation.x );
-          fbxobject.rotation.y += 0.05 * ( rotationTarget.x - fbxobject.rotation.y );
+          // Auto rotate mobile
+          if ($this.windowW >= $this.mobileBreakpoint) {
+            fbxobject.rotation.x += 0.05 * ( rotationTarget.y - fbxobject.rotation.x );
+            fbxobject.rotation.y += 0.05 * ( rotationTarget.x - fbxobject.rotation.y );
+          } else {
+            fbxobject.rotation.y += 0.006;
+          }
         }
 
         // scene.background = cubeMap;
@@ -225,7 +232,7 @@ export default {
 
     // window.addEventListener('DOMContentLoaded', (event) => {
       setTimeout(() => {
-        this.containerTarget = document.querySelector('.three-dee-' + this.uid)
+        this.container = document.querySelector('.three-dee-' + this.uid)
         this.main()
       }, 1);
     // });
@@ -235,8 +242,12 @@ export default {
 
 <style lang="scss">
 
-.three-dee {
+.three-dee-landing {
   height: 100%;
+
+  @media only screen and (max-width: 588px) {
+    pointer-events: none;
+  }
 }
 
 </style>

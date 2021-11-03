@@ -4,7 +4,6 @@
       <div :class="'col-' + block.images.length" class="three-images__image" v-for="img in block.images">
 
 
-
         <template v-if="img.ext === '.jpg' || img.ext === '.png' || img.ext === '.gif'">
           <!-- <img :src="getStrapiMedia(img.url)" alt=""> -->
 

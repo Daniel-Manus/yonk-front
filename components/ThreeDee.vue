@@ -22,7 +22,9 @@ export default {
     return {
       uid: null,
       debug: false,
-      container: null
+      container: null,
+      windowW: 0,
+      mobileBreakpoint: 588,
     }
   },
   methods: {
@@ -42,8 +44,8 @@ export default {
       const target = new THREE.Vector2();
 
       // DANIEL TO DO: Make this the size of parent + adapt on resize
-      let mainWidth = $this.containerTarget.offsetWidth;
-      let mainHeight = $this.containerTarget.offsetWidth * 0.71;
+      let mainWidth = $this.container.offsetWidth;
+      let mainHeight = $this.container.offsetWidth * 0.71;
       const windowHalf = new THREE.Vector2( mainWidth / 2, mainHeight / 2 );
 
       const params = {
@@ -66,7 +68,7 @@ export default {
 
 				const container = document.createElement( 'div' );
 
-				$this.containerTarget.appendChild( container );
+				$this.container.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 25, mainWidth / mainHeight, 1, 3000 );
 
@@ -141,9 +143,9 @@ export default {
 			}
 
 			function onWindowResize() {
-        
-        mainWidth = $this.containerTarget.offsetWidth;
-        mainHeight = $this.containerTarget.offsetWidth * 0.71;
+        $this.windowW = window.innerWidth;
+        mainWidth = $this.container.offsetWidth;
+        mainHeight = $this.container.offsetWidth * 0.71;
 
         let aspect = mainWidth / mainHeight;
         // let zoom = aspect >= 1.4 ? 800 : 1900;
@@ -172,20 +174,23 @@ export default {
 
 				if ( mixer ) mixer.update( delta );
 
-				// renderer.render( scene, camera );
         let renderTarget, cubeMap;
 
 				renderTarget = hdrCubeRenderTarget;
-
-
-        // fbxobject && (fbxobject.rotation.y += 0.05);
 
         rotationTarget.x = ( 1 - mouse.x ) * 0.0012;
         rotationTarget.y = ( 1 - mouse.y ) * 0.0018;
         
         if (fbxobject) {
-          fbxobject.rotation.x += 0.05 * ( rotationTarget.y - fbxobject.rotation.x );
-          fbxobject.rotation.y += 0.05 * ( rotationTarget.x - fbxobject.rotation.y );
+
+          // Auto rotate mobile
+          if ($this.windowW >= $this.mobileBreakpoint) {
+            fbxobject.rotation.x += 0.05 * ( rotationTarget.y - fbxobject.rotation.x );
+            fbxobject.rotation.y += 0.05 * ( rotationTarget.x - fbxobject.rotation.y );
+          } else {
+            fbxobject.rotation.y += 0.006;
+          }
+
         }
 
         // scene.background = cubeMap;
@@ -201,7 +206,7 @@ export default {
 
     // window.addEventListener('DOMContentLoaded', (event) => {
       setTimeout(() => {
-        this.containerTarget = document.querySelector('.three-dee-' + this.uid)
+        this.container = document.querySelector('.three-dee-' + this.uid)
         this.main()
       }, 1);
     // });
@@ -213,6 +218,9 @@ export default {
 
 .three-dee {
   // border: 2px dashed red;
+    @media only screen and (max-width: 588px) {
+      pointer-events: none;
+    }
 }
 
 
