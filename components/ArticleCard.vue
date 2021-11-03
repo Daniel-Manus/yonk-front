@@ -5,7 +5,7 @@
     class=""
   >
     <!-- IF IMAGE -->
-    <template v-if="article.image.ext === '.jpg' || article.image.ext === '.png' || article.image.ext === '.gif'">
+    <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
       <!-- IF IMAGE MEDIUM -->
       <template v-if="article.image.formats.small">
@@ -38,6 +38,11 @@ export default {
       type: Object,
       default: () => ({}),
     },
+  },
+  data: function () {
+    return {
+      imgExt: this.article.image.ext.toLowerCase()
+    }
   },
   components: {
     ThreeDee
