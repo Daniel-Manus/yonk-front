@@ -50,6 +50,7 @@ export default {
     };
   },
   mounted() {
+    console.log('testing testing 🎤')
     if (!this.global.Passwordprotect) return;
 
     var password = prompt("🧙‍♂️ The Doors of Durin, Lord of Moria. Speak, friend, and enter 🧙‍♂️");
