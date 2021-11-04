@@ -9,12 +9,12 @@
 
       <!-- IF IMAGE MEDIUM -->
       <template v-if="article.image.formats.small">
-        <img :src="getStrapiMedia(article.image.formats.small.url)" alt="">
+        <img @load="onImageLoad" :src="getStrapiMedia(article.image.formats.small.url)" alt="">
       </template>
 
       <!-- IF NO IMAGE MEDIUM -->
       <template v-else>
-        <img :src="getStrapiMedia(article.image.url)" alt="">
+        <img @load="onImageLoad" :src="getStrapiMedia(article.image.url)" alt="">
       </template>
       
     </template>
@@ -49,6 +49,9 @@ export default {
   },
   methods: {
     getStrapiMedia,
+    onImageLoad() {
+      this.$emit('image-loaded', true)
+    }
   },
 };
 </script>

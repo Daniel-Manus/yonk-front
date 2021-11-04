@@ -2,7 +2,7 @@
   <div class="masonry-grid hidden">
     <template v-for="article in reversedArticles">
       <div :class="{ 'fbx': article.image.ext == '.fbx' }" class="project-thumb">
-        <ArticleCard :key="article.id" :article="article" />
+        <ArticleCard :key="article.id" :article="article" @image-loaded="imageLoaded" />
       </div>
     </template>
   </div>
@@ -23,6 +23,11 @@ export default {
       default: () => [],
     },
   },
+  data: function () {
+    return {
+      imagesLoaded: 0
+    }
+  },
   computed: {
     reversedArticles() {
       // let rev = this.articles.slice();
@@ -32,7 +37,12 @@ export default {
       return this.articles.slice().reverse();
     } 
   },
-mounted() {
+  methods: {
+    imageLoaded(e) {
+      this.imagesLoaded++;
+    },
+  },
+  mounted() {
     // Grid.MasonryGrid
     const grid = new MasonryGrid('.masonry-grid', {
       defaultDirection: "end",
@@ -60,42 +70,23 @@ mounted() {
     onWindowResize();
 
     let iterations = 0;
-    
 
-    // check if images are in already
-    const checkIfReady = () => {
-
-      let imgs = document.querySelectorAll('.project-thumb');
-      let stop = false;
-
-      imgs.forEach((img, i) => {
-        if (img.offsetHeight < 30) {
-          console.log("🚀 ~", i, img.offsetHeight)
-            stop = true;
-          }
-      });
-
-      if (stop) {
-        
-        iterations++;
-        console.log("🚀 ~ iterations", iterations)
-
-        if (iterations < 1000) {
-          setTimeout(() => {
-              checkIfReady()
-          }, 2);
-        }
-        
-      } else {
-
+    const checkImgsLoad = () => {
+      console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
+      if (this.imagesLoaded === this.articles.length) {
         let parent = document.querySelector('.masonry-grid')
         grid.renderItems();
         parent.classList.remove('hidden')
-
+      } else {
+        setTimeout(() => {
+          iterations++;
+          iterations < 3000 && checkImgsLoad();
+        }, 2);
       }
     }
 
-    checkIfReady();
+    checkImgsLoad();
+
   }
 };
 </script>
