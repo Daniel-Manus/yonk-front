@@ -86,10 +86,11 @@ export default {
         grid.renderItems();
         parent.classList.remove('hidden')
 
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 40; i++) {
           setTimeout(() => {
+            console.log('uuum')
             grid.renderItems();
-          }, 100 * (i + 1));
+          }, 30 * (i + 1));
         }
 
     //   } else {
