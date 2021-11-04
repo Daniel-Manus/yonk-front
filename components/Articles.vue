@@ -86,17 +86,16 @@ export default {
     // const checkImgsLoad = () => {
     //   console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
     //   if (this.imagesLoaded === this.articles.length) {
-      
+
         // let parent = document.querySelector('.masonry-grid')
         // grid.renderItems();
         // parent.classList.remove('hidden')
 
-        // for (let i = 0; i < 40; i++) {
-        //   setTimeout(() => {
-        //     console.log('uuum')
-        //     grid.updateItems();
-        //   }, 30 * (i + 1));
-        // }
+        for (let i = 0; i < 40; i++) {
+          setTimeout(() => {
+            grid.updateItems();
+          }, 30 * (i + 1));
+        }
 
     //   } else {
     //     setTimeout(() => {
