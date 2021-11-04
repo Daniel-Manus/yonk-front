@@ -72,10 +72,9 @@ export default {
     window.addEventListener( 'resize', onWindowResize );
     onWindowResize();
 
-    this.articles.forEach(article => {
-      
-      console.log("🚀 ~ file: Articles.vue ~ line 75 ~ mounted ~ article", article.image)
-    });
+    // this.articles.forEach(article => {
+    
+    // });
 
     // let iterations = 0;
 
@@ -89,7 +88,7 @@ export default {
         for (let i = 0; i < 40; i++) {
           setTimeout(() => {
             console.log('uuum')
-            grid.renderItems();
+            grid.updateItems();
           }, 30 * (i + 1));
         }
 
