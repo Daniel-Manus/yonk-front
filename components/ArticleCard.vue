@@ -2,19 +2,24 @@
   <nuxt-link
     :key="article.id"
     :to="{ name: 'penisfuck-slug', params: { slug: article.slug } }"
-    class=""
-  >
+    class="thumb-container">
     <!-- IF IMAGE -->
     <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
       <!-- IF IMAGE MEDIUM -->
       <template v-if="article.image.formats.small">
-        <img @load="onImageLoad" :src="getStrapiMedia(article.image.formats.small.url)" alt="">
+        <img
+            @load="onImageLoad"
+            :src="getStrapiMedia(article.image.formats.small.url)"
+            alt="">
       </template>
 
       <!-- IF NO IMAGE MEDIUM -->
       <template v-else>
-        <img @load="onImageLoad" :src="getStrapiMedia(article.image.url)" alt="">
+        <img
+          @load="onImageLoad"
+          :src="getStrapiMedia(article.image.url)"
+          alt="">
       </template>
       
     </template>
@@ -41,7 +46,7 @@ export default {
   },
   data: function () {
     return {
-      imgExt: this.article.image.ext.toLowerCase()
+      imgExt: this.article.image.ext.toLowerCase(),
     }
   },
   components: {
@@ -50,9 +55,11 @@ export default {
   methods: {
     getStrapiMedia,
     onImageLoad() {
-      this.$emit('image-loaded', true)
+      // this.$emit('image-loaded', { id: this.article.id, width: this.article.image.width, height: this.article.image.height })
     }
   },
+  mounted() {
+  }
 };
 </script>
 

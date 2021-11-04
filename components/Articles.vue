@@ -25,7 +25,8 @@ export default {
   },
   data: function () {
     return {
-      imagesLoaded: 0
+      // imagesLoaded: 0
+      // imageDimensions: []
     }
   },
   computed: {
@@ -39,7 +40,8 @@ export default {
   },
   methods: {
     imageLoaded(e) {
-      this.imagesLoaded++;
+      // this.imagesLoaded++;
+      // this.imageDimensions.push(e)
     },
   },
   mounted() {
@@ -63,29 +65,42 @@ export default {
         } else {
           grid.column = 1;
         }
+        grid.renderItems();
       }, 100);
     }
 
     window.addEventListener( 'resize', onWindowResize );
     onWindowResize();
 
-    let iterations = 0;
+    this.articles.forEach(article => {
+      
+      console.log("🚀 ~ file: Articles.vue ~ line 75 ~ mounted ~ article", article.image)
+    });
 
-    const checkImgsLoad = () => {
-      console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
-      if (this.imagesLoaded === this.articles.length) {
+    // let iterations = 0;
+
+    // const checkImgsLoad = () => {
+    //   console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
+    //   if (this.imagesLoaded === this.articles.length) {
         let parent = document.querySelector('.masonry-grid')
         grid.renderItems();
         parent.classList.remove('hidden')
-      } else {
-        setTimeout(() => {
-          iterations++;
-          iterations < 3000 && checkImgsLoad();
-        }, 2);
-      }
-    }
 
-    checkImgsLoad();
+        for (let i = 0; i < 15; i++) {
+          setTimeout(() => {
+            grid.renderItems();
+          }, 100 * (i + 1));
+        }
+
+    //   } else {
+    //     setTimeout(() => {
+    //       iterations++;
+    //       iterations < 3000 && checkImgsLoad();
+    //     }, 2);
+    //   }
+    // }
+
+    // checkImgsLoad();
 
   }
 };
