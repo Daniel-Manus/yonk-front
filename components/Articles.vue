@@ -55,22 +55,27 @@ export default {
       // columnSizeRatio: -1,
     });
 
+    const setCols = () => {      
+      if (window.innerWidth > 1098) {
+        grid.column = 3;
+
+      } else if (window.innerWidth < 1098 && window.innerWidth > 588) {
+        grid.column = 2;
+      } else {
+        grid.column = 1;
+      }
+      grid.renderItems();
+    }
+
     const onWindowResize = () => {
       setTimeout(() => {        
-        if (window.innerWidth > 1098) {
-          grid.column = 3;
-
-        } else if (window.innerWidth < 1098 && window.innerWidth > 588) {
-          grid.column = 2;
-        } else {
-          grid.column = 1;
-        }
-        grid.renderItems();
+        setCols();
       }, 100);
     }
 
     window.addEventListener( 'resize', onWindowResize );
     onWindowResize();
+    setCols();
 
     // this.articles.forEach(article => {
     
