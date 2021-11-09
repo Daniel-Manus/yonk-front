@@ -1,7 +1,8 @@
 <template>
   <div @click="handleClick" :class="'video-' + block.id" class="video block">
+    {{block.video}}
     <video width="320" height="240">
-      <source :src="getStrapiMedia(block.video.url)" type="video/mp4">
+      <source :src="getStrapiMedia(block.video.url) + '#t=0.1'" type="video/mp4">
     </video>
     <div :class="'video__button--playing-' + playing" class="video__button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 127 127">
