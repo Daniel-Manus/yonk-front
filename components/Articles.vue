@@ -87,9 +87,9 @@ export default {
     //   console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
     //   if (this.imagesLoaded === this.articles.length) {
 
-        // let parent = document.querySelector('.masonry-grid')
+        let parent = document.querySelector('.masonry-grid')
         // grid.renderItems();
-        // parent.classList.remove('hidden')
+        parent.classList.remove('hidden')
 
         for (let i = 0; i < 40; i++) {
           setTimeout(() => {
