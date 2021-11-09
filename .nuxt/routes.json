@@ -2,29 +2,29 @@
   {
     "name": "info",
     "path": "/info",
-    "component": "/Users/manusnijhoff/Documents/2021/U_N/yonk-front/pages/info.vue",
+    "component": "/Users/daniel.hernandezchacon/dd/yonk/frontend/pages/info.vue",
     "chunkName": "pages/info",
-    "_name": "_70678088"
+    "_name": "_322ebe08"
   },
   {
     "name": "categories-slug",
     "path": "/categories/:slug?",
-    "component": "/Users/manusnijhoff/Documents/2021/U_N/yonk-front/pages/categories/_slug.vue",
+    "component": "/Users/daniel.hernandezchacon/dd/yonk/frontend/pages/categories/_slug.vue",
     "chunkName": "pages/categories/_slug",
-    "_name": "_02d64765"
+    "_name": "_c3aa6eb6"
   },
   {
-    "name": "penisfuck-slug",
-    "path": "/penisfuck/:slug?",
-    "component": "/Users/manusnijhoff/Documents/2021/U_N/yonk-front/pages/penisfuck/_slug.vue",
-    "chunkName": "pages/penisfuck/_slug",
-    "_name": "_4157f7d2"
+    "name": "project-slug",
+    "path": "/project/:slug?",
+    "component": "/Users/daniel.hernandezchacon/dd/yonk/frontend/pages/project/_slug.vue",
+    "chunkName": "pages/project/_slug",
+    "_name": "_d5dfbc94"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/manusnijhoff/Documents/2021/U_N/yonk-front/pages/index.vue",
+    "component": "/Users/daniel.hernandezchacon/dd/yonk/frontend/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_8a5e3c98"
+    "_name": "_7f40a874"
   }
 ]

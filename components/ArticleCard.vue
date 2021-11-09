@@ -1,8 +1,9 @@
 <template>
   <nuxt-link
     :key="article.id"
-    :to="{ name: 'penisfuck-slug', params: { slug: article.slug } }"
+    :to="{ name: 'project-slug', params: { slug: article.slug } }"
     class="thumb-container">
+  
     <!-- IF IMAGE -->
     <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
