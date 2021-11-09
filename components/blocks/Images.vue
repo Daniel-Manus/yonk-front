@@ -4,15 +4,21 @@
       <div :class="'col-' + block.images.length" class="three-images__image" v-for="img in block.images">
 
 
-        <template v-if="img.ext === '.jpg' || img.ext === '.png' || img.ext === '.gif'">
-          <!-- <img :src="getStrapiMedia(img.url)" alt=""> -->
+        <template v-if="img.ext.toLowerCase() === '.jpg' || img.ext.toLowerCase() === '.jpeg' || img.ext.toLowerCase() === '.png' || img.ext.toLowerCase() === '.gif'">
 
-          <template v-if="img.formats.medium">
-            <img :src="getStrapiMedia(img.formats.medium.url)" alt="">
+          <!-- IF 1 IMAGE -->
+          <template v-if="block.images.length == 1">
+              <img :src="getStrapiMedia(img.url)" alt="">
           </template>
 
-          <template v-else>
-            <img :src="getStrapiMedia(img.url)" alt="">
+          <!-- IF 2 OR MORE IMAGES -->
+          <template v-if="block.images.length >= 2">
+            <template v-if="img.formats.medium">
+              <img :src="getStrapiMedia(img.formats.medium.url)" alt="">
+            </template>
+            <template v-else>
+              <img :src="getStrapiMedia(img.url)" alt="">
+            </template>
           </template>
 
         </template>
