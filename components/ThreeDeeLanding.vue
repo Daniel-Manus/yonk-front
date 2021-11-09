@@ -123,6 +123,7 @@ export default {
           fbxobject = object;
 
 					scene.add( object );
+          $this.container.style.opacity = 1;
 				});
 
 
@@ -244,6 +245,8 @@ export default {
 
 .three-dee-landing {
   height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 
   @media only screen and (max-width: 588px) {
     pointer-events: none;
