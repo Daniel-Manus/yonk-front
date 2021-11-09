@@ -1,6 +1,5 @@
 <template>
   <div @click="handleClick" :class="'video-' + block.id" class="video block">
-    {{block.video}}
     <video width="320" height="240">
       <source :src="getStrapiMedia(block.video.url) + '#t=0.1'" type="video/mp4">
     </video>
@@ -62,7 +61,6 @@ export default {
   height: auto;
   position: relative;
   cursor: pointer;
-  border: 1px dashed red;
 
   video {
     width: 100%;
