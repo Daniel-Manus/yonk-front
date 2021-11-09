@@ -7,10 +7,10 @@
     <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
       <!-- IF IMAGE MEDIUM -->
-      <template v-if="article.image.formats.small">
+      <template v-if="article.image.formats.medium">
         <img
             @load="onImageLoad"
-            :src="getStrapiMedia(article.image.formats.small.url)"
+            :src="getStrapiMedia(article.image.formats.medium.url)"
             alt="">
       </template>
 
