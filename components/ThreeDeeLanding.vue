@@ -21,6 +21,10 @@ export default {
       type: Number,
       default: () => ({}),
     },
+    masterScale: {
+      type: Number,
+      default: 1,
+    },
   },
   data: function () {
     return {
@@ -65,6 +69,25 @@ export default {
       function onMouseMove( event ) {
         mouse.x = ( event.clientX - windowHalf.x );
         mouse.y = ( event.clientY - windowHalf.y );
+      }
+
+      function setObjSize() {        
+        if (!fbxobject) return;
+
+        aspectRatio = mainWidth / mainHeight;
+          
+        if (aspectRatio >= 1.3) {
+          // fbxobject.position.z = 0;
+          fbxobject.scale.x = $this.masterScale;
+          fbxobject.scale.y = $this.masterScale;
+          fbxobject.scale.z = $this.masterScale;
+        } else {
+          // fbxobject.position.z = -1220;
+          fbxobject.scale.x = $this.masterScale / 2;
+          fbxobject.scale.y = $this.masterScale / 2;
+          fbxobject.scale.z = $this.masterScale / 2;
+        }
+
       }
 
 			function init() {
@@ -120,7 +143,10 @@ export default {
 
 					} );
 
+          object.position.y = -40
+
           fbxobject = object;
+          setObjSize(fbxobject)
 
 					scene.add( object );
           $this.container.style.opacity = 1;
@@ -149,7 +175,6 @@ export default {
 
 			function onWindowResize() {
         $this.windowW = window.innerWidth;
-        aspectRatio = mainWidth / mainHeight;
         
         mainWidth = $this.container.offsetWidth;
         mainHeight = $this.container.offsetHeight;
@@ -161,20 +186,8 @@ export default {
 
 				renderer.setSize( mainWidth, mainHeight );
 
-        if (fbxobject) {
-          
-          if (aspectRatio >= 1.3) {
-            // fbxobject.position.z = 0;
-            fbxobject.scale.x = 1;
-            fbxobject.scale.y = 1;
-            fbxobject.scale.z = 1;
-          } else {
-            // fbxobject.position.z = -1220;
-            fbxobject.scale.x = 0.5;
-            fbxobject.scale.y = 0.5;
-            fbxobject.scale.z = 0.5;
-          }
-        } 
+        setObjSize(fbxobject);
+        
 			}
 
 

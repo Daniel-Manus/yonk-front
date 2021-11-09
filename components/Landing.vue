@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" />
+    <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" :masterScale="scale" />
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
       default: () => {},
     },
     lightIntensity: {
+      type: Number,
+      default: () => 1,
+    },
+    scale: {
       type: Number,
       default: () => 1,
     },
@@ -37,7 +41,7 @@ $mp: 24px;
   transform: translateX(-50%);
   font-size: 1vw;
   color: black;
-  margin-top: 71px;
+  margin-top: 79px;
 
   @media only screen and (max-width: 588px) {
     height: calc(95vh - 194px);
