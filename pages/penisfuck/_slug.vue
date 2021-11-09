@@ -197,6 +197,7 @@ $mp: 24px;
     font-size: 18px;
     font-family: "MD-System";
     font-weight: 900;
+    color: black;
 
     @media only screen and (max-width: 1098px) {
        margin-top: $mp;
