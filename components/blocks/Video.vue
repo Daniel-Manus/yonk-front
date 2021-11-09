@@ -61,6 +61,7 @@ export default {
   height: auto;
   position: relative;
   cursor: pointer;
+  border: 1px dashed red;
 
   video {
     width: 100%;
