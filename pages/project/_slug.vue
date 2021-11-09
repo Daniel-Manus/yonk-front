@@ -195,7 +195,7 @@ $mp: 24px;
     margin-bottom: $mp;
     margin-top: -2px;
     font-size: 18px;
-    font-family: "MD-System";
+    font-family: "MD-System", sans-serif;
     font-weight: 900;
     color: black;
 

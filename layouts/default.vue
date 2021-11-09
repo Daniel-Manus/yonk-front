@@ -67,7 +67,7 @@ body {
   max-width: $maxwidth;
   margin: 0 auto;
   padding: 0 $mp;
-  font-family: "MD-System";
+  font-family: "MD-System", sans-serif;
   color: black;
 }
 

@@ -136,7 +136,7 @@ $mp: 24px;
     margin-bottom: $mp;
     margin-top: -2px;
     font-size: 18px;
-    font-family: "MD-System";
+    font-family: "MD-System", sans-serif;
 
     @media only screen and (max-width: 1098px) {
        margin-top: $mp;
