@@ -32,13 +32,13 @@ export default {
 
 <style lang="scss">
 $mp: 24px;
+$maxwidth: 1500px;
 
 .landing {
-  width: 100vw;
-  margin-left: 50%;
+  max-width: $maxwidth;
+  margin: 0 auto;
   height: calc(95vh - 124px);
   margin-bottom: 49px;
-  transform: translateX(-50%);
   font-size: 1vw;
   color: black;
   margin-top: 79px;
