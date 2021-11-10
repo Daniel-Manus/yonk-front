@@ -147,7 +147,7 @@ export default {
 
 					} );
 
-          object.position.y = -40
+          object.position.y = -10
 
           fbxobject = object;
           setObjSize(fbxobject)
