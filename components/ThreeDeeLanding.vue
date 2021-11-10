@@ -99,7 +99,7 @@ export default {
 
 				$this.container.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 25, mainWidth / mainHeight, 1, 3000 );
+				camera = new THREE.PerspectiveCamera( 25, mainWidth / mainHeight, 1, 6000 );
 
 				// camera.position.set( 0, 0, 800 );
 
