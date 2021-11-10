@@ -1,5 +1,5 @@
 <template>
-  <div :class="'three-dee-' + uid" class="three-dee-landing">
+  <div :class="'three-dee-' + uid" class="three-dee-landing" :style="{ background: background }">
   </div>
 </template>
 
@@ -105,7 +105,7 @@ export default {
 
 				scene = new THREE.Scene();
 
-				scene.background = new THREE.Color( $this.background );
+				// scene.background = new THREE.Color( $this.background );
 
 				const hemiLight = new THREE.HemisphereLight( 0xfbfced, 0x919191 );
 				hemiLight.position.set( 0, 200, 0 );
@@ -157,7 +157,7 @@ export default {
 				});
 
 
-				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( mainWidth, mainHeight );
 				renderer.shadowMap.enabled = true;
@@ -264,6 +264,7 @@ export default {
   height: 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
+  background: rgba(245, 245, 245);
 
   @media only screen and (max-width: 588px) {
     pointer-events: none;
