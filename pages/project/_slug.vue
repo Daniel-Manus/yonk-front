@@ -146,7 +146,7 @@ $mp: 24px;
 
 .heading {
   //margin-top: 90px;
-  margin-top: $mp * 3;
+  margin-top: $mp * 4.5;
   margin-bottom: $mp * 2;
   color: black;
   white-space: nowrap;
