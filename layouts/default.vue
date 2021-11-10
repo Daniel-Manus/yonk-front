@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss">
 
-$maxwidth: 1500px;
+$maxwidth: 1750px;
 $mp: 24px;
 $hl: #ff2a00;
 
@@ -73,7 +73,7 @@ body {
 .main-container {
   max-width: $maxwidth;
   margin: 0 auto;
-  padding: 0 $mp;
+  padding: 0 $mp * 4;
   font-family: "MD-System", sans-serif;
   color: black;
   position: relative;
@@ -91,7 +91,7 @@ body {
 .header-inner {
   max-width: $maxwidth;
   margin: 0 auto;
-  padding: 0 $mp;
+  padding: 0 $mp * 4;
   font-family: "MD-System", sans-serif;
   position: relative;
 }

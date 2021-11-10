@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss">
 $mp: 24px;
-$maxwidth: 1500px;
+$maxwidth: 1750px;
 
 .landing {
   max-width: $maxwidth;
