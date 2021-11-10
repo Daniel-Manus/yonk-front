@@ -25,6 +25,9 @@ export default {
       type: Number,
       default: 1,
     },
+    background: {
+      type: String,
+    },
   },
   data: function () {
     return {
@@ -72,7 +75,6 @@ export default {
       }
 
       function setObjSize() {        
-        console.log("🚀 ~ file: ThreeDeeLanding.vue ~ line 82 ~ setObjSize ~ $this.masterScale", $this.masterScale)
         if (!fbxobject) return;
 
         aspectRatio = mainWidth / mainHeight;
@@ -102,7 +104,8 @@ export default {
 				// camera.position.set( 0, 0, 800 );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xffffff );
+
+				scene.background = new THREE.Color( $this.background );
 
 				const hemiLight = new THREE.HemisphereLight( 0xfbfced, 0x919191 );
 				hemiLight.position.set( 0, 200, 0 );

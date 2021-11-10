@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" :masterScale="scale" />
+    <ThreeDeeLanding :model="model" :lightIntensity="lightIntensity" :masterScale="scale" :background="background" />
   </div>
 </template>
 
@@ -23,6 +23,10 @@ export default {
     scale: {
       type: Number,
       default: () => 1,
+    },
+    background: {
+      type: String,
+      default: () => 'FFFFFF',
     },
   },
   computed: {},

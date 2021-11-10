@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" />
+    <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" :background="homepage.background" />
     <div class="">
       <div class="">
         <Articles :articles="articles" />
