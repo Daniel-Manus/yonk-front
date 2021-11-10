@@ -89,6 +89,7 @@ $mp: 24px;
 
 .heading {
   //margin-top: 90px;
+  margin-top: $mp * 3;
   margin-bottom: $mp * 2;
   color: black;
   white-space: nowrap;
@@ -125,6 +126,8 @@ $mp: 24px;
 
   &__content {
     width: calc(33.33% - 26px);
+    position: relative;
+    height: 100%;
 
     @media only screen and (max-width: 1098px) {
       width: 100%;
@@ -137,6 +140,8 @@ $mp: 24px;
     margin-top: -2px;
     font-size: 18px;
     font-family: "MD-System", sans-serif;
+    font-weight: 900;
+    color: black;
 
     @media only screen and (max-width: 1098px) {
        margin-top: $mp;
@@ -144,11 +149,19 @@ $mp: 24px;
   }
   
   &__desc {
-    //padding-top: $mp;
-    padding-top: 6px;
+      a {
+        text-decoration: underline;
+      }
+  }
+
+  &__links,
+  &__desc {
+    padding-top: $mp;
     font-size: 18px;
     color: black;
-    //border-top: 1px solid black;
+    font-weight: 200;
+
+    * { color: black; }
 
     @media only screen and (max-width: 1098px) {
        padding-right: 20%;
@@ -156,6 +169,42 @@ $mp: 24px;
 
     @media only screen and (max-width: 588px) {
        padding-right: 0;
+    }
+
+
+    // typografy stuff
+    blockquote {
+      font-size: 15px;
+      font-weight: 200;
+      font-style: normal;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+
+    hr {
+      border-top: 1px solid black;
+      margin-top: 38px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__links {
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.2s;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none !important;
     }
   }
 }

@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss">
 
-$maxwidth: 1750px;
+$maxwidth: 1700px;
 $mp: 24px;
 $hl: #ff2a00;
 
@@ -70,10 +70,18 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+.main-container,
+.header-inner {
+  padding: 0 $mp * 3;
+
+  @media only screen and (max-width: 1098px) {
+    padding: 0 $mp;
+  }
+}
+
 .main-container {
   max-width: $maxwidth;
   margin: 0 auto;
-  padding: 0 $mp * 4;
   font-family: "MD-System", sans-serif;
   color: black;
   position: relative;
@@ -91,7 +99,6 @@ body {
 .header-inner {
   max-width: $maxwidth;
   margin: 0 auto;
-  padding: 0 $mp * 4;
   font-family: "MD-System", sans-serif;
   position: relative;
 }
@@ -124,11 +131,8 @@ body {
 
 .logo {
   top: 0;
-  // border: 1px dashed red;
-  // margin: 20px 20px 20px -20px;
   margin-left: -21px;
   padding: 30px 20px 20px;
-  // position: fixed;
   display: inline-block;
   z-index: 100;
 
