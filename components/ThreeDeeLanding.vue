@@ -72,6 +72,7 @@ export default {
       }
 
       function setObjSize() {        
+        console.log("🚀 ~ file: ThreeDeeLanding.vue ~ line 82 ~ setObjSize ~ $this.masterScale", $this.masterScale)
         if (!fbxobject) return;
 
         aspectRatio = mainWidth / mainHeight;
