@@ -158,9 +158,12 @@ body {
 .footer {
   &__links {
     display: inline-block;
-    // border: 1px dashed blue;
     font-size: 18px;
     padding: 30px 0 30px;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 15px;
+    } 
 
     &.left {
       .footer__link {
