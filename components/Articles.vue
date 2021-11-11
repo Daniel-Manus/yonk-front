@@ -55,6 +55,8 @@ export default {
       // columnSizeRatio: -1,
     });
 
+    grid.renderItems();
+
     const setCols = () => {      
       if (window.innerWidth > 1098) {
         grid.column = 3;
@@ -64,13 +66,21 @@ export default {
       } else {
         grid.column = 1;
       }
-      grid.renderItems();
     }
 
     const onWindowResize = () => {
       setTimeout(() => {        
         setCols();
-      }, 100);
+        grid.updateItems();
+        grid.syncElements();
+
+
+        setTimeout(() => {
+          setCols();
+          grid.updateItems();
+          grid.syncElements();
+        }, 1000);
+      }, 300);
     }
 
     window.addEventListener( 'resize', onWindowResize );
@@ -91,11 +101,6 @@ export default {
         // grid.renderItems();
         parent.classList.remove('hidden')
 
-        for (let i = 0; i < 40; i++) {
-          setTimeout(() => {
-            grid.updateItems();
-          }, 30 * (i + 1));
-        }
 
     //   } else {
     //     setTimeout(() => {
