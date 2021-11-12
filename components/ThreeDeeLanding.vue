@@ -70,7 +70,7 @@ export default {
       document.addEventListener( 'mousemove', onMouseMove, false );
 
       function onMouseMove( event ) {
-        mouse.x = ( event.clientX - windowHalf.x );
+        mouse.x = ( event.clientX - window.innerWidth / 2 );
         mouse.y = ( event.clientY - windowHalf.y );
       }
 
@@ -211,8 +211,8 @@ export default {
 
 				renderTarget = hdrCubeRenderTarget;
 
-        rotationTarget.x = ( 1 - mouse.x ) * 0.0012;
-        rotationTarget.y = ( 1 - mouse.y ) * 0.0018;
+        rotationTarget.x = ( 1 + mouse.x ) * 0.0012;
+        rotationTarget.y = ( 1 + mouse.y ) * 0.0018;
         
         if (fbxobject) {
           
