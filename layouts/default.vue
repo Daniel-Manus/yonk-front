@@ -19,7 +19,7 @@
           <nuxt-link class="" to="/info">
             Info
           </nuxt-link>
-          <a href="https://www.google.com" target="_black" class="header__link inactive">
+          <a href="https://www.google.com" target="_blank" class="header__link inactive">
             Store
           </a>
         </div>
@@ -35,8 +35,8 @@
         <div class="footer__link">info@yonk.online</div>
       </div>
       <div class="footer__links right">
-        <a class="footer__link" href="">Instagram</a>
-        <a class="footer__link" href="">Twitter</a>
+        <a class="footer__link" href="https://www.instagram.com/yonk.online/" target="_blank">Instagram</a>
+        <a class="footer__link" href="https://twitter.com/yonkonline" target="_blank">Twitter</a>
       </div>
     </div>
   </div>
