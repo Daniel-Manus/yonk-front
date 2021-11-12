@@ -89,8 +89,9 @@ $mp: 24px;
 
 .heading {
   //margin-top: 90px;
-
+  margin-top: $mp * 4.5;
   margin-bottom: $mp * 2;
+  position: relative;
   color: black;
   white-space: nowrap;
 
@@ -126,11 +127,13 @@ $mp: 24px;
 
   &__content {
     width: calc(33.33% - 26px);
-    position: relative;
+    position: absolute;
     height: 100%;
 
     @media only screen and (max-width: 1098px) {
       width: 100%;
+      position: relative;
+      margin-top: 30px;
     }
   }
 
@@ -196,8 +199,12 @@ $mp: 24px;
     font-size: 14px;
     position: absolute;
     bottom: 0;
-    opacity: 0;
     transition: 0.2s;
+
+    @media only screen and (max-width: 1098px) {
+      position: relative;
+      margin-top: 20px;
+    }
 
     p {
       margin: 0;
@@ -219,5 +226,4 @@ $mp: 24px;
     margin-bottom: $mp * 2;
   }
 }
-
 </style>

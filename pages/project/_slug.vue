@@ -110,22 +110,9 @@ export default {
     };
   },
   mounted() {
-    let headingContent = document.querySelector('.heading__content');
-    let headingImage = document.querySelector('.heading__image');
-
     let linkContainer = document.querySelector('.heading__links');
 
     if (linkContainer) {
-
-      setTimeout(() => {
-        linkContainer.style.opacity = 1;
-
-        if (headingContent.offsetHeight < headingImage.offsetHeight) {
-          headingContent.style.height = headingImage.offsetHeight + 'px';
-        } else {
-          linkContainer.style.position = 'relative';
-        }
-      }, 100);
 
       let links = linkContainer.querySelectorAll('a');
 
@@ -148,6 +135,7 @@ $mp: 24px;
   //margin-top: 90px;
   margin-top: $mp * 4.5;
   margin-bottom: $mp * 2;
+  position: relative;
   color: black;
   white-space: nowrap;
 
@@ -183,11 +171,13 @@ $mp: 24px;
 
   &__content {
     width: calc(33.33% - 26px);
-    position: relative;
+    position: absolute;
     height: 100%;
 
     @media only screen and (max-width: 1098px) {
       width: 100%;
+      position: relative;
+      margin-top: 30px;
     }
   }
 
@@ -253,8 +243,12 @@ $mp: 24px;
     font-size: 14px;
     position: absolute;
     bottom: 0;
-    opacity: 0;
     transition: 0.2s;
+
+    @media only screen and (max-width: 1098px) {
+      position: relative;
+      margin-top: 20px;
+    }
 
     p {
       margin: 0;
