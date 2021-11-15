@@ -194,6 +194,7 @@ $mp: 24px;
 
       @media only screen and (max-width: 1098px) {
         margin-top: $mp;
+        margin-bottom: 0;
       }
     }
     
