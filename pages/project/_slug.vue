@@ -183,12 +183,14 @@ $mp: 24px;
 
     &__title {
       margin: 0;
-      margin-bottom: $mp;
+      margin-bottom: 10px;
       margin-top: -2px;
       font-size: 18px;
+      padding-bottom: 15px;
       font-family: "MD-System", sans-serif;
       font-weight: 900;
       color: black;
+      border-bottom: 1px solid black;
 
       @media only screen and (max-width: 1098px) {
         margin-top: $mp;

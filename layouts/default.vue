@@ -191,4 +191,8 @@ body {
   }
 }
 
+a:hover {
+  color: $hl !important;
+}
+
 </style>
