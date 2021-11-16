@@ -10,7 +10,7 @@
       
       <div class="heading">
         <div class="heading__image">
-          <img src="/temoinfo.png" alt="">
+          <img src="/tempinfo.jpg" alt="">
         </div>
 
         <div class="heading__content">
@@ -22,14 +22,15 @@
             <p>
               Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in advertising, video clips, identity, face filters and a lot more. This tool has helped us develop a unique maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from conventional 3D and is entirely playful, dream-like and sometimes, damn right weird!
             </p>
+            <hr>
 
-            <h4>Contact:</h4>
+            <h4>Contact</h4>
 
-            email: info@yonk.online<br>
-            address: Amsterdamse Veerkade 4a, Den Haag, Netherlands, 2512AJ<br>
-            Phone: +31 610354829 (NL)<br>
+            info@yonk.online<br>
+            Amsterdamse Veerkade 4a, Den Haag, Netherlands, 2512AJ<br>
+            +31 610354829 (NL)<br>
 
-            <h4>Clients include:</h4>
+            <h4>Clients include</h4>
 
             Lazy Oaf, UK<br>
             Nike, EU<br>
@@ -43,7 +44,7 @@
             Golgotha, FR<br>
             Cassoulet Palace, CA<br>
 
-            <h4>Talks:</h4>
+            <h4>Talks</h4>
 
             Livetalkfrom, 2020<br>
             HKU salon #3: Plugged in, 2020<br>
@@ -52,17 +53,17 @@
             INTL International Assembly, 2021<br>
             Zefir7, 2021<br>
 
-            <h4>Workshops:</h4>
+            <h4>Workshops</h4>
 
             Central Saint Martins, 2021<br>
             STORE STORE London, 2021<br>
             INTL International Assembly, 2021<br>
 
-            <h4>Press:</h4>
+            <h4>Press</h4>
             <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice that, 2019</a><br>
             <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice that, 2021</a><br>
 
-            <h4>NFT's:</h4>
+            <h4>NFT's</h4>
             <a href="http://superrare.co/yonk/" target="_blank">Super Rare</a><br>
             <a href="http://foundation.app/yonk/" target="_blank">Foundation</a><br>
             <a href="https://opensea.io/collection/cycloobs" target="_blank">Cycloobs</a><br>
