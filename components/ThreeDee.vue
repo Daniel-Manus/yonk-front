@@ -105,8 +105,10 @@ export default {
 
 					mixer = new THREE.AnimationMixer( object );
 
-					const action = mixer.clipAction( object.animations[ 0 ] );
-					action.play();
+					if (object.animations) {
+            const action = mixer.clipAction( object.animations[ 0 ] );
+            action.play();
+          }
 
 					object.traverse( function ( child ) {
 
