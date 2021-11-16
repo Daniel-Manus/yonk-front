@@ -10,7 +10,7 @@
       
       <div class="heading">
         <div class="heading__image">
-          <img :src="getStrapiMedia(article.headerimage.url)" alt="">
+          <img :src="getStrapiMedia(article.headerimage.formats.large.url)" alt="">
         </div>
 
         <div class="heading__content">

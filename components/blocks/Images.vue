@@ -8,7 +8,7 @@
 
           <!-- IF 1 IMAGE -->
           <template v-if="block.images.length == 1">
-              <img :src="getStrapiMedia(img.url)" alt="">
+              <img :src="getStrapiMedia(img.formats.large.url)" alt="">
           </template>
 
           <!-- IF 2 OR MORE IMAGES -->
