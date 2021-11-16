@@ -11,17 +11,17 @@
       <template v-if="article.image.formats.medium">
         <img
             @load="onImageLoad"
-            :src="getStrapiMedia(article.image.formats.medium.url)"
+            :src="getStrapiMedia(article.image.formats.small.url)"
             alt="">
       </template>
 
       <!-- IF NO IMAGE MEDIUM -->
-      <template v-else>
+      <!-- <template v-else>
         <img
           @load="onImageLoad"
           :src="getStrapiMedia(article.image.url)"
           alt="">
-      </template>
+      </template> -->
       
     </template>
 
