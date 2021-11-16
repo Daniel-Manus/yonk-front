@@ -135,7 +135,7 @@ export default {
 
 					mixer = new THREE.AnimationMixer( object );
 
-          if (object.animations) {
+          if (object.animations.length > 0) {
             const action = mixer.clipAction( object.animations[ 0 ] );
             action.play();
           }
