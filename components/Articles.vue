@@ -45,7 +45,6 @@ export default {
     },
   },
   mounted() {
-    // Grid.MasonryGrid
     const grid = new MasonryGrid('.masonry-grid', {
       defaultDirection: "end",
       gap: 5,
@@ -87,30 +86,8 @@ export default {
     onWindowResize();
     setCols();
 
-    // this.articles.forEach(article => {
-    
-    // });
-
-    // let iterations = 0;
-
-    // const checkImgsLoad = () => {
-    //   console.log("🚀 ~ imagesLoaded ", this.imagesLoaded)
-    //   if (this.imagesLoaded === this.articles.length) {
-
-        let parent = document.querySelector('.masonry-grid')
-        // grid.renderItems();
-        parent.classList.remove('hidden')
-
-
-    //   } else {
-    //     setTimeout(() => {
-    //       iterations++;
-    //       iterations < 3000 && checkImgsLoad();
-    //     }, 2);
-    //   }
-    // }
-
-    // checkImgsLoad();
+    let parent = document.querySelector('.masonry-grid')
+    parent.classList.remove('hidden')
 
   }
 };
