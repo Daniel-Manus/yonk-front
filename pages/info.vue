@@ -20,7 +20,7 @@
           v-html="$md.render(article.content)" -->
           <div class="heading__desc" >
             <p>
-              Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in advertising, video clips, identity, face filters and a lot more. This tool has helped us develop a unique maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from conventional 3D and is entirely playful, dream-like and sometimes, damn right weird!
+              Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in advertising, video clips, identity, face filters and much more. This tool has helped us develop a unique maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from conventional 3D and is entirely playful, dream-like and sometimes, damn right weird!
             </p>
             <hr>
 
