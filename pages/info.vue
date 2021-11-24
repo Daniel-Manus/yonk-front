@@ -32,6 +32,7 @@
 
             <h4>Clients include</h4>
 
+            Wieden+Kennedy, UK<br>
             Lazy Oaf, UK<br>
             Nike, EU<br>
             VICE, USA<br>
