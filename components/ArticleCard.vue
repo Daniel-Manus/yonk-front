@@ -7,21 +7,21 @@
     <!-- IF IMAGE -->
     <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
-      <!-- IF IMAGE MEDIUM -->
-      <template v-if="article.image.formats.medium">
+      <!-- IF IMAGE SMALL -->
+      <template v-if="article.image.formats.small">
         <img
             @load="onImageLoad"
             :src="getStrapiMedia(article.image.formats.small.url)"
             alt="">
       </template>
 
-      <!-- IF NO IMAGE MEDIUM -->
-      <!-- <template v-else>
+      <!-- IF NO IMAGE SMALL -->
+      <template v-else>
         <img
           @load="onImageLoad"
           :src="getStrapiMedia(article.image.url)"
           alt="">
-      </template> -->
+      </template>
       
     </template>
 
