@@ -62,6 +62,7 @@
             <h4>Press</h4>
             <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice that, 2019</a><br>
             <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice that, 2021</a><br>
+            <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
 
             <h4>NFT's</h4>
             <a href="http://superrare.co/yonk/" target="_blank">Super Rare</a><br>
