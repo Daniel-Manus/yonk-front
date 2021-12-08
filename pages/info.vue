@@ -27,7 +27,6 @@
             <h4>Contact</h4>
 
             info@yonk.online<br>
-            Amsterdamse Veerkade 4a, Den Haag, Netherlands, 2512AJ<br>
             +31 610354829 (NL)<br>
 
             <h4>Clients include</h4>
