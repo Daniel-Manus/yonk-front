@@ -265,7 +265,7 @@ export default {
 .three-dee-landing {
   height: 100%;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   background: rgba(245, 245, 245);
 
   @media only screen and (max-width: 588px) {

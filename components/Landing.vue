@@ -46,6 +46,7 @@ $maxwidth: 1700px;
   font-size: 1vw;
   color: black;
   margin-top: 79px;
+  background: rgba(245, 245, 245);
 
   @media only screen and (max-width: 588px) {
     height: calc(95vh - 194px);
