@@ -160,9 +160,9 @@ $mp: 24px;
     }
 
     &__image {
-      width: calc(66% + 26px);
-      padding-right: $mp;
-      // border: 1px dashed red;
+      width: calc(66%);
+      margin-right: $mp;
+      background: rgb(0,0,0,1);
 
       @media only screen and (max-width: 1098px) {
         width: 100%;
@@ -171,6 +171,7 @@ $mp: 24px;
 
       img {
         width: 100%;
+        opacity: 0.95;
       }
     }
 
