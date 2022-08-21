@@ -37,6 +37,7 @@
       <div class="footer__links right">
         <a class="footer__link" href="https://www.instagram.com/yonk.online/" target="_blank">Instagram</a>
         <a class="footer__link" href="https://twitter.com/yonkonline" target="_blank">Twitter</a>
+        <a class="footer__link" href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a>
       </div>
     </div>
   </div>
@@ -188,6 +189,12 @@ body {
     &:hover {
       color: $hl;
     } 
+
+    @media only screen and (max-width: 600px) {
+      display: block;
+      text-align: left;
+      width: 20vw;
+    }
   }
 }
 
