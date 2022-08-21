@@ -20,7 +20,9 @@
           v-html="$md.render(article.content)" -->
           <div class="heading__desc" >
             <p>
-              Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in advertising, video clips, identity, face filters and much more. This tool has helped us develop a unique maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from conventional 3D and is entirely playful, dream-like and sometimes, damn right weird!
+              Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in commercial and non-commercial projects. This tool has helped us develop a unique, maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from traditional 3D and is entirely playful, dream-like and sometimes, damn right weird!
+              <br><br>
+              <span class="italic">Featured in Meta's web series 'Are We There Yet'</span>
             </p>
             <hr>
 
@@ -31,18 +33,15 @@
 
             <h4>Clients include</h4>
 
-            Wieden+Kennedy, UK<br>
-            Lazy Oaf, UK<br>
-            Nike, EU<br>
-            VICE, USA<br>
-            RiffRaff films, UK<br>
-            Atlantic Records, US/UK<br>
-            Agile films, UK<br>
-            It's Nice That, UK<br>
-            Muziekgebouw, NL<br>
-            My Mochi, US<br>
-            Golgotha, FR<br>
-            Cassoulet Palace, CA<br>
+            Meta<br>
+            Amazon<br>
+            Nike<br>
+            VICE<br>
+            Selfridges<br>
+            Atlantic Records<br>
+            It's Nice That<br>
+            Wix<br>
+            New York Times<br>
 
             <h4>Talks</h4>
 
@@ -58,12 +57,19 @@
             Central Saint Martins, 2021<br>
             STORE STORE London, 2021<br>
             INTL International Assembly, 2021<br>
+            Graphic Matters, 2022<br>
 
             <h4>Press</h4>
-            <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice that, 2019</a><br>
-            <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice that, 2021</a><br>
-            <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
+              <a href="https://www.itsnicethat.com/articles/yonk-digital-160120">It's Nice That, 2019</a><br>
+              <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721">It's Nice That, 2021</a><br>
+              <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk">Lazy Oaf, 2021</a><br>
+              <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622">It's Nice That, 2022</a><br>
+              <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722">It's Nice That, 2022</a><br>
 
+            <h4>Livestreams</h4>
+              <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
+              <a href="https://www.twitch.tv/yonkonline" target="_blank">Twitch</a><br>
+              
             <h4>NFT's</h4>
             <a href="http://superrare.co/yonk/" target="_blank">Super Rare</a><br>
             <a href="http://foundation.app/yonk/" target="_blank">Foundation</a><br>
@@ -283,6 +289,10 @@ $mp: 24px;
       margin-bottom: $mp * 2;
     }
   }
+}
+
+.italic {
+  font-style: italic;
 }
 
 </style>
