@@ -35,7 +35,6 @@
       </div>
 
       <div class="content-blocks">
-
         <template v-for="block in article.dynamiclayout">
           <!-- IMAGES BLOCK -->
           <template v-if="block.__component === 'content-blocks.images-block'">
@@ -45,6 +44,11 @@
           <!-- VIDEO BLOCK -->
           <template v-if="block.__component === 'content-blocks.video-block'">
             <Video :block="block" />
+          </template>
+
+          <!-- VIDEO BLOCK -->
+          <template v-if="block.__component === 'content-blocks.youtube-block'">
+            <Youtube :block="block" />
           </template>
 
         </template>
@@ -68,6 +72,7 @@ import { getMetaTags } from "../../utils/seo";
 import ThreeDee from "../../components/ThreeDee.vue";
 import Images from "../../components/blocks/Images.vue";
 import Video from "../../components/blocks/Video.vue";
+import Youtube from "../../components/blocks/Youtube.vue";
 
 export default {
   async asyncData({ $strapi, params }) {
@@ -82,7 +87,8 @@ export default {
   components: {
     ThreeDee,
     Images,
-    Video
+    Video,
+    Youtube
   },
   data() {
     return {
