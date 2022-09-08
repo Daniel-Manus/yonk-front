@@ -22,7 +22,7 @@
             <p>
               Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in commercial and non-commercial projects. This tool has helped us develop a unique, maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from traditional 3D and is entirely playful, dream-like and sometimes, damn right weird!
               <br><br>
-              <span class="italic">Featured in Meta's web series 'Are We There Yet'</span>
+              <a href="https://www.youtube.com/watch?v=aHsEgwTPBOA" target="_blank">Featured in Meta's web series 'Are We There Yet'</a>
             </p>
             <hr>
 
@@ -60,11 +60,13 @@
             Graphic Matters, 2022<br>
 
             <h4>Press</h4>
-              <a href="https://www.itsnicethat.com/articles/yonk-digital-160120">It's Nice That, 2019</a><br>
-              <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721">It's Nice That, 2021</a><br>
-              <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk">Lazy Oaf, 2021</a><br>
-              <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622">It's Nice That, 2022</a><br>
-              <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722">It's Nice That, 2022</a><br>
+              <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice That, 2019</a><br>
+              <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice That, 2021</a><br>
+              <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
+              <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622" target="_blank">It's Nice That, 2022</a><br>
+              <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722" target="_blank">It's Nice That, 2022</a><br>
+              <a href="https://www.itsnicethat.com/features/meet-me-in-the-metaverse-digital-commissions-the-conran-shop-digital-product-design-240822" target="_blank">It's Nice That, 2022</a><br>
+              <a href="https://www.conranshop.co.uk/journal/ldf22-meet-yonk/" target="_blank">The Conran Shop, 2022</a><br>
 
             <h4>Livestreams</h4>
               <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
@@ -289,10 +291,6 @@ $mp: 24px;
       margin-bottom: $mp * 2;
     }
   }
-}
-
-.italic {
-  font-style: italic;
 }
 
 </style>
