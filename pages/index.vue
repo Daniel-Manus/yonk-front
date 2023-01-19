@@ -22,44 +22,44 @@
 </template>
 
 <script>
-import Landing from "../components/Landing";
-import Articles from "../components/Articles";
-import { getMetaTags } from "../utils/seo";
-import { getStrapiMedia } from "../utils/medias";
+// import Landing from "../components/Landing";
+// import Articles from "../components/Articles";
+// import { getMetaTags } from "../utils/seo";
+// import { getStrapiMedia } from "../utils/medias";
 
 export default {
   components: {
-    Articles,
-    Landing
+    // Articles,
+    // Landing
   },
-  async asyncData({ $strapi }) {
-    return {
-      articles: await $strapi.find("articles"),
-      homepage: await $strapi.find("homepage"),
-      global: await $strapi.find("global"),
-    };
-  },
+  // async asyncData({ $strapi }) {
+  //   return {
+  //     articles: await $strapi.find("articles"),
+  //     homepage: await $strapi.find("homepage"),
+  //     global: await $strapi.find("global"),
+  //   };
+  // },
   head() {
-    const { seo } = this.homepage;
-    const { defaultSeo, favicon, siteName } = this.global;
+    // const { seo } = this.homepage;
+    // const { defaultSeo, favicon, siteName } = this.global;
 
-    // Merge default and article-specific SEO data
-    const fullSeo = {
-      ...defaultSeo,
-      ...seo,
-    };
+    // // Merge default and article-specific SEO data
+    // const fullSeo = {
+    //   ...defaultSeo,
+    //   ...seo,
+    // };
 
-    return {
-      titleTemplate: `%s | ${siteName}`,
-      title: fullSeo.metaTitle,
-      meta: getMetaTags(fullSeo),
-      link: [
-        {
-          rel: "favicon",
-          href: getStrapiMedia(favicon.url),
-        },
-      ],
-    };
+    // return {
+    //   titleTemplate: `%s | ${siteName}`,
+    //   title: fullSeo.metaTitle,
+    //   meta: getMetaTags(fullSeo),
+    //   link: [
+    //     {
+    //       rel: "favicon",
+    //       href: getStrapiMedia(favicon.url),
+    //     },
+    //   ],
+    // };
   },
   methods: {
     consoleMsg() {
@@ -93,18 +93,18 @@ export default {
     },
   },
   mounted() {
-    this.consoleMsg();
+    // this.consoleMsg();
 
-    if (!this.global.Passwordprotect) return;
+    // if (!this.global.Passwordprotect) return;
 
-    var password = prompt("🧙‍♂️ The Doors of Durin, Lord of Moria. Speak, friend, and enter 🧙‍♂️");
+    // var password = prompt("🧙‍♂️ The Doors of Durin, Lord of Moria. Speak, friend, and enter 🧙‍♂️");
 
-    if(password != this.global.Password){
-      document.body.innerHTML = '';
-      document.body.innerHTML = 'Password Failed! Reload to Renter Password.';
-    } else {
+    // if(password != this.global.Password){
+    //   document.body.innerHTML = '';
+    //   document.body.innerHTML = 'Password Failed! Reload to Renter Password.';
+    // } else {
 
-    }
+    // }
   }
 };
 </script>
