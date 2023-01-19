@@ -1,9 +1,21 @@
 <template>
   <div>
-    <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" :background="homepage.background" />
+  <div class="maintenance">
+    <div class="maintenance__inner">
+      <h4>
+        🔧<br>
+        We're currently down for maintenance.
+      </h4>
+      <p>
+        We expect to be back shortly.
+      </p>
+    </div>
+  </div>
+
+    <!-- <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" :background="homepage.background" /> -->
     <div class="">
       <div class="">
-        <Articles :articles="articles" />
+        <!-- <Articles :articles="articles" /> -->
       </div>
     </div>
   </div>
@@ -134,6 +146,27 @@ $hl: #ff2a00;
   src: url('./static/fonts/MDSystem-Dark.woff');
   font-weight: 800;
   font-style: normal;
+}
+
+.maintenance {
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    * {
+      text-align: center;
+      color: black;
+    }
+  }
 }
 
 </style>
