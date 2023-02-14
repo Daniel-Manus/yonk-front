@@ -12,7 +12,7 @@
       </div>
     </div> -->
 
-    <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" :background="homepage.background" />
+    <!-- <Landing :model="homepage.landingfbx" :lightIntensity="homepage.lightintensity" :scale="homepage.scale" :background="homepage.background" /> -->
     <div class="">
       <div class="">
         <Articles :articles="articles" />
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Landing from "../components/Landing";
+// import Landing from "../components/Landing";
 import Articles from "../components/Articles";
 import { getMetaTags } from "../utils/seo";
 import { getStrapiMedia } from "../utils/medias";
@@ -30,7 +30,7 @@ import { getStrapiMedia } from "../utils/medias";
 export default {
   components: {
     Articles,
-    Landing
+    // Landing
   },
   async asyncData({ $strapi }) {
     return {

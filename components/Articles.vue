@@ -98,6 +98,7 @@ export default {
   .masonry-grid {
     // background: lightgray;
     margin-bottom: 10px;
+    margin-top: 79px;
 
     &.hidden {
       opacity: 0;
