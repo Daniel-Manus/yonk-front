@@ -94,7 +94,6 @@ export default {
   },
   mounted() {
     this.consoleMsg();
-    console.log('🌵 articles', this.articles)
 
     if (!this.global.Passwordprotect) return;
 
