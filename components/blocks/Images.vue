@@ -3,7 +3,6 @@
     
       <div :class="'col-' + block.images.length" class="three-images__image" v-for="img in block.images">
 
-
         <template v-if="img.ext.toLowerCase() === '.jpg' || img.ext.toLowerCase() === '.jpeg' || img.ext.toLowerCase() === '.png' || img.ext.toLowerCase() === '.gif'">
 
           <!-- IF 1 IMAGE -->
