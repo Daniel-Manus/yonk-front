@@ -29,7 +29,6 @@
             <h4>Contact</h4>
 
             info@yonk.online<br>
-            +31 610354829 (NL)<br>
 
             <h4>Clients include</h4>
 
