@@ -20,7 +20,7 @@
           v-html="$md.render(article.content)" -->
           <div class="heading__desc" >
             <p>
-              Hello, we are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations, and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, surreal, and delightfully strange.
+              Hello! We are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations, and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, surreal, and delightfully strange.
               <br><br>
               <a href="https://www.youtube.com/watch?v=aHsEgwTPBOA" target="_blank">Featured in Meta's web series 'Are We There Yet'</a>
             </p>
