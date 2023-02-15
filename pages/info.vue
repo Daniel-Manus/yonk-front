@@ -10,7 +10,7 @@
       
       <div class="heading">
         <div class="heading__image">
-          <img src="/tempinfo.jpg" alt="">
+          <img src="/tempinfo2.jpg" alt="">
         </div>
 
         <div class="heading__content">
@@ -20,7 +20,7 @@
           v-html="$md.render(article.content)" -->
           <div class="heading__desc" >
             <p>
-              Hello there! We are YONK, a 3D studio based in The Hague (NL). We specialise in using Virtual Reality sculpting software to create 3D character design and animations to be used in commercial and non-commercial projects. This tool has helped us develop a unique, maximalist and whimsical style paired with tangible textures and vivid colours. We aim to create work that steers away from traditional 3D and is entirely playful, dream-like and sometimes, damn right weird!
+              Hello, we are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations, and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, surreal, and delightfully strange.
               <br><br>
               <a href="https://www.youtube.com/watch?v=aHsEgwTPBOA" target="_blank">Featured in Meta's web series 'Are We There Yet'</a>
             </p>
@@ -37,11 +37,13 @@
             Amazon<br>
             Nike<br>
             VICE<br>
+            Sprite<br>
             Selfridges<br>
             Atlantic Records<br>
             It's Nice That<br>
             Wix<br>
             New York Times<br>
+            Bloomberg<br>
 
             <h4>Talks</h4>
 
@@ -51,6 +53,8 @@
             Sharing Bauhaus, 2020<br>
             INTL International Assembly, 2021<br>
             Zefir7, 2021<br>
+            DEMO Festival, 2022<br>
+            Pictoplasma, 2023<br>
 
             <h4>Workshops</h4>
 
@@ -58,6 +62,8 @@
             STORE STORE London, 2021<br>
             INTL International Assembly, 2021<br>
             Graphic Matters, 2022<br>
+            Meta House, Miami Art Week, 2022<br>
+            INTL International Assembly, 2023<br>
 
             <h4>Press</h4>
               <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice That, 2019</a><br>
@@ -67,6 +73,7 @@
               <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722" target="_blank">It's Nice That, 2022</a><br>
               <a href="https://www.itsnicethat.com/features/meet-me-in-the-metaverse-digital-commissions-the-conran-shop-digital-product-design-240822" target="_blank">It's Nice That, 2022</a><br>
               <a href="https://www.conranshop.co.uk/journal/ldf22-meet-yonk/" target="_blank">The Conran Shop, 2022</a><br>
+              <a href="https://www.itsnicethat.com/news/yonk-wieden-and-kennedy-spriteverse-advertising-161222" target="_blank">It's Nice That, 2022</a><br>
 
             <h4>Livestreams</h4>
               <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
