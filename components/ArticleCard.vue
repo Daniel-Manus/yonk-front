@@ -56,7 +56,7 @@ export default {
   methods: {
     getStrapiMedia,
     onImageLoad() {
-      // this.$emit('image-loaded', { id: this.article.id, width: this.article.image.width, height: this.article.image.height })
+      this.$emit('image-loaded', { id: this.article.id, width: this.article.image.width, height: this.article.image.height })
     }
   },
   mounted() {

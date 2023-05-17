@@ -1,5 +1,5 @@
 <template>
-  <div class="masonry-grid hidden">
+  <div class="masonry-grid" :class="{ 'hidden': !imagesLoaded }">
     <template v-for="article in sortedArticles">
       <div :class="{ 'fbx': article.image.ext == '.fbx' }" class="project-thumb">
         <ArticleCard :key="article.id" :article="article" @image-loaded="imageLoaded" />
@@ -25,8 +25,8 @@ export default {
   },
   data: function () {
     return {
-      // imagesLoaded: 0
-      // imageDimensions: []
+      imagesLoadedN: 0,
+      imagesLoaded: false
     }
   },
   computed: {
@@ -44,8 +44,11 @@ export default {
   },
   methods: {
     imageLoaded(e) {
-      // this.imagesLoaded++;
-      // this.imageDimensions.push(e)
+      this.imagesLoadedN++;
+
+      if (this.imagesLoadedN === this.articles.length) {
+        this.imagesLoaded = true;
+      }
     },
   },
   mounted() {
@@ -90,9 +93,11 @@ export default {
     onWindowResize();
     setCols();
 
-    let parent = document.querySelector('.masonry-grid')
-    parent.classList.remove('hidden')
-
+    // Fallback in case images don't load,
+    // leaving everything hidden
+    setTimeout(() => {
+      this.imagesLoaded = true;
+    }, 3000);
   }
 };
 </script>
