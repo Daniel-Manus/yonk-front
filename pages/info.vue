@@ -35,6 +35,7 @@
             Meta<br>
             Amazon<br>
             Nike<br>
+            Nickelodeon<br>
             VICE<br>
             Sprite<br>
             Selfridges<br>
@@ -94,7 +95,7 @@
 <script>
 import moment from "moment";
 import { getStrapiMedia } from "../utils/medias";
-import { getMetaTags } from "../utils/seo";
+// import { getMetaTags } from "../utils/seo";
 
 export default {
   async asyncData({ $strapi }) {
