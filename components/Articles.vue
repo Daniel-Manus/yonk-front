@@ -1,6 +1,6 @@
 <template>
   <div class="masonry-grid hidden">
-    <template v-for="article in reversedArticles">
+    <template v-for="article in sortedArticles">
       <div :class="{ 'fbx': article.image.ext == '.fbx' }" class="project-thumb">
         <ArticleCard :key="article.id" :article="article" @image-loaded="imageLoaded" />
       </div>
@@ -30,12 +30,16 @@ export default {
     }
   },
   computed: {
-    reversedArticles() {
-      // let rev = this.articles.slice();
-      // rev = rev.reverse();
-      // return rev
+    sortedArticles() {
+      // Sort by publishedAt
+      const sorted = this.articles.sort(function(a, b) {
+          var textA = a.publishedAt.toUpperCase();
+          var textB = b.publishedAt.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
 
-      return this.articles.slice().reverse();
+      // Reverse and return
+      return sorted.slice().reverse();
     } 
   },
   methods: {
