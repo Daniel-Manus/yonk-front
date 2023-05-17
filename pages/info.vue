@@ -140,6 +140,7 @@ export default {
     // };
   },
   mounted() {
+    document.title = 'Yonk | Info'
   }
 };
 </script>
