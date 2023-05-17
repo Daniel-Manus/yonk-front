@@ -29,7 +29,10 @@ export default {
     "@assets/css/main.css",
   ],
   plugins: [{ src: "~/plugins/uikit.js", ssr: false }],
-  modules: ["@nuxtjs/markdownit", "@nuxtjs/strapi"],
+  modules: ["@nuxtjs/markdownit", "@nuxtjs/strapi", "@nuxtjs/gtm"],
+  gtm: {
+    id: "GTM-WB5RXML"
+  },
   strapi: {
     url: strapiBaseUri,
     entities: [

@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"strapiBaseUri":"http://localhost:1337"}
+      env: {"strapiBaseUri":"yonk-back.herokuapp.com/"}
     }
     // Only set once
 
