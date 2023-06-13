@@ -74,9 +74,9 @@
             <a href="https://www.itsnicethat.com/news/yonk-wieden-and-kennedy-spriteverse-advertising-161222" target="_blank">It's Nice That, 2022</a><br>
 
             <h4>Awards</h4>
-            Spriteverse - Animation / Series - Gold - The One Club<br>
-            Spriteverse - Craft / Animation - Silver - The One Club<br>
-            Spriteverse - Moving Image / Series - Bronze - The One Club<br>
+            Spriteverse - Animation / Series<br>Gold - The One Club<br><br>
+            Spriteverse - Craft / Animation<br>Silver - The One Club<br><br>
+            Spriteverse - Moving Image / Series<br>Bronze - The One Club<br>
 
             <h4>Livestreams</h4>
             <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
