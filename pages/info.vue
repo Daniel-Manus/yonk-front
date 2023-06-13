@@ -20,9 +20,7 @@
           v-html="$md.render(article.content)" -->
           <div class="heading__desc" >
             <p>
-              Hello! We are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations, and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, surreal, and delightfully strange.
-              <br><br>
-              <a href="https://www.youtube.com/watch?v=aHsEgwTPBOA" target="_blank">Featured in Meta's web series 'Are We There Yet'</a>
+              Hello there! We are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, maximalist and delightfully strange.
             </p>
             <hr>
 
@@ -66,24 +64,24 @@
             INTL International Assembly, 2023<br>
 
             <h4>Press</h4>
-              <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice That, 2019</a><br>
-              <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice That, 2021</a><br>
-              <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
-              <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622" target="_blank">It's Nice That, 2022</a><br>
-              <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722" target="_blank">It's Nice That, 2022</a><br>
-              <a href="https://www.itsnicethat.com/features/meet-me-in-the-metaverse-digital-commissions-the-conran-shop-digital-product-design-240822" target="_blank">It's Nice That, 2022</a><br>
-              <a href="https://www.conranshop.co.uk/journal/ldf22-meet-yonk/" target="_blank">The Conran Shop, 2022</a><br>
-              <a href="https://www.itsnicethat.com/news/yonk-wieden-and-kennedy-spriteverse-advertising-161222" target="_blank">It's Nice That, 2022</a><br>
+            <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice That, 2019</a><br>
+            <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice That, 2021</a><br>
+            <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
+            <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622" target="_blank">It's Nice That, 2022</a><br>
+            <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722" target="_blank">It's Nice That, 2022</a><br>
+            <a href="https://www.itsnicethat.com/features/meet-me-in-the-metaverse-digital-commissions-the-conran-shop-digital-product-design-240822" target="_blank">It's Nice That, 2022</a><br>
+            <a href="https://www.conranshop.co.uk/journal/ldf22-meet-yonk/" target="_blank">The Conran Shop, 2022</a><br>
+            <a href="https://www.itsnicethat.com/news/yonk-wieden-and-kennedy-spriteverse-advertising-161222" target="_blank">It's Nice That, 2022</a><br>
+
+            <h4>Awards</h4>
+            Spriteverse - Animation / Series - Gold - The One Club<br>
+            Spriteverse - Craft / Animation - Silver - The One Club<br>
+            Spriteverse - Moving Image / Series - Bronze - The One Club<br>
 
             <h4>Livestreams</h4>
-              <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
-              <a href="https://www.twitch.tv/yonkonline" target="_blank">Twitch</a><br>
+            <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
+            <a href="https://www.twitch.tv/yonkonline" target="_blank">Twitch</a><br>
               
-            <h4>NFT's</h4>
-            <a href="http://superrare.co/yonk/" target="_blank">Super Rare</a><br>
-            <a href="http://foundation.app/yonk/" target="_blank">Foundation</a><br>
-            <a href="https://opensea.io/collection/cycloobs" target="_blank">Cycloobs</a><br>
-
           </div>
         </div>
       </div>
