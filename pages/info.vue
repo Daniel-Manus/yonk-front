@@ -1,91 +1,27 @@
 <template>
   <div class="info">
+    <div v-if="true" class="">
+      <!-- eslint-disable vue/no-v-html -->
 
-    <div  v-if="true" class="">
-        <!-- eslint-disable vue/no-v-html -->
-        
-        <!-- <div
-          v-if="article.content"
-          v-html="$md.render(article.content)"/> -->
-      
       <div class="heading">
-        <div class="heading__image">
-          <img src="/tempinfo2.jpg" alt="">
+        <div v-if="global.info_image" class="heading__image">
+          <img
+            :src="getStrapiMedia(global.info_image.formats.large.url)"
+            alt=""
+          />
         </div>
 
         <div class="heading__content">
-          <!-- <h1 class="heading__title">{{ article.title }}</h1> -->
-          
-          <!-- v-if="article.content"
-          v-html="$md.render(article.content)" -->
-          <div class="heading__desc" >
-            <p>
-              Hello there! We are YONK, the 3D animation studio that specializes in using Virtual Reality Sculpting software to craft visually striking artworks, animations and character designs. Our innovative approach to this technology has resulted in a unique style that seamlessly combines raw, childlike sculpting with polished, vibrant veneers. Our goal is to break free from traditional 3D norms and craft work that's playful, maximalist and delightfully strange.
-            </p>
-            <hr>
-
-            <h4>Contact</h4>
-
-            info@yonk.online<br>
-
-            <h4>Clients include</h4>
-
-            Meta<br>
-            Amazon<br>
-            Nike<br>
-            Nickelodeon<br>
-            VICE<br>
-            Sprite<br>
-            Selfridges<br>
-            Atlantic Records<br>
-            It's Nice That<br>
-            Wix<br>
-            New York Times<br>
-            Bloomberg<br>
-
-            <h4>Talks</h4>
-
-            Livetalkfrom, 2020<br>
-            HKU salon #3: Plugged in, 2020<br>
-            AnimatekaPRO, 2020<br>
-            Sharing Bauhaus, 2020<br>
-            INTL International Assembly, 2021<br>
-            Zefir7, 2021<br>
-            DEMO Festival, 2022<br>
-            Pictoplasma, 2023<br>
-
-            <h4>Workshops</h4>
-
-            Central Saint Martins, 2021<br>
-            STORE STORE London, 2021<br>
-            INTL International Assembly, 2021<br>
-            Graphic Matters, 2022<br>
-            Meta House, Miami Art Week, 2022<br>
-            INTL International Assembly, 2023<br>
-
-            <h4>Press</h4>
-            <a href="https://www.itsnicethat.com/articles/yonk-digital-160120" target="_blank">It's Nice That, 2019</a><br>
-            <a href="https://www.itsnicethat.com/news/lovers-my-mochi-advertising-220721" target="_blank">It's Nice That, 2021</a><br>
-            <a href="https://www.lazyoaf.com/blogs/interview/interview-yonk" target="_blank">Lazy Oaf, 2021</a><br>
-            <a href="https://www.itsnicethat.com/articles/demo-festival-studio-dumbar-connor-campbell-yonk-animation-media-partnership-290622" target="_blank">It's Nice That, 2022</a><br>
-            <a href="https://www.itsnicethat.com/news/droga5-amazon-books-that-reading-feeling-awaits-digital-250722" target="_blank">It's Nice That, 2022</a><br>
-            <a href="https://www.itsnicethat.com/features/meet-me-in-the-metaverse-digital-commissions-the-conran-shop-digital-product-design-240822" target="_blank">It's Nice That, 2022</a><br>
-            <a href="https://www.conranshop.co.uk/journal/ldf22-meet-yonk/" target="_blank">The Conran Shop, 2022</a><br>
-            <a href="https://www.itsnicethat.com/news/yonk-wieden-and-kennedy-spriteverse-advertising-161222" target="_blank">It's Nice That, 2022</a><br>
-
-            <h4>Awards</h4>
-            Spriteverse - Animation / Series<br>Gold - The One Club<br><br>
-            Spriteverse - Craft / Animation<br>Silver - The One Club<br><br>
-            Spriteverse - Moving Image / Series<br>Bronze - The One Club<br>
-
-            <h4>Livestreams</h4>
-            <a href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a><br>
-            <a href="https://www.twitch.tv/yonkonline" target="_blank">Twitch</a><br>
-              
-          </div>
+          <div
+            v-if="global.info_description"
+            v-html="$md.render(global.info_description)"
+          />
+          <div
+            v-if="global.info_description_2"
+            v-html="$md.render(global.info_description_2)"
+          />
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -96,6 +32,7 @@ import { getStrapiMedia } from "../utils/medias";
 // import { getMetaTags } from "../utils/seo";
 
 export default {
+  components: {},
   async asyncData({ $strapi }) {
     return {
       // articles: await $strapi.find("articles"),
@@ -104,12 +41,21 @@ export default {
       // info: await $strapi.find("info"),
     };
   },
-  components: {
-  },
   data() {
     return {
       apiUrl: process.env.strapiBaseUri,
     };
+  },
+  mounted() {
+    document.title = "Yonk | Info";
+    // Add target _blank to links
+    let linkContainer = document.querySelector(".info");
+    if (linkContainer) {
+      let links = linkContainer.querySelectorAll("a");
+      links.forEach((link) => {
+        link.setAttribute("target", "_blank");
+      });
+    }
   },
   methods: {
     moment,
@@ -119,27 +65,24 @@ export default {
     const { defaultSeo, favicon, siteName } = this.global;
     // Merge default and article-specific SEO data
     // const fullSeo = {
-      //   ...defaultSeo,
+    //   ...defaultSeo,
     //   metaTitle: this.article.title,
     //   metaDescription: this.article.description,
     //   shareImage: this.article.image,
     // };
 
     // return {
-      //   titleTemplate: `%s | ${siteName}`,
+    //   titleTemplate: `%s | ${siteName}`,
     //   title: fullSeo.metaTitle,
     //   meta: getMetaTags(fullSeo),
     //   link: [
-      //     {
-        //       rel: "favicon",
+    //     {
+    //       rel: "favicon",
     //       href: favicon && getStrapiMedia(favicon.url),
     //     },
     //   ],
     // };
   },
-  mounted() {
-    document.title = 'Yonk | Info'
-  }
 };
 </script>
 
@@ -148,7 +91,6 @@ $mp: 24px;
 
 .info {
   margin-top: 84px;
-
 
   .heading {
     //margin-top: 90px;
@@ -162,13 +104,14 @@ $mp: 24px;
       white-space: normal;
     }
 
-    * { white-space: normal; }
+    * {
+      white-space: normal;
+    }
 
     &__image,
     &__content {
       display: inline-block;
       width: 49.4%;
-      font-size: 0;
       vertical-align: top;
       box-sizing: border-box;
     }
@@ -176,7 +119,7 @@ $mp: 24px;
     &__image {
       width: calc(66%);
       margin-right: $mp;
-      background: rgb(0,0,0,1);
+      background: rgb(0, 0, 0, 1);
 
       @media only screen and (max-width: 1098px) {
         width: 100%;
@@ -192,52 +135,10 @@ $mp: 24px;
     &__content {
       width: calc(33.33% - 26px);
       height: 100%;
-
-      @media only screen and (max-width: 1098px) {
-        width: 100%;
-        position: relative;
-        margin-top: 30px;
-      }
-    }
-
-    &__title {
-      margin: 0;
-      margin-bottom: $mp;
-      margin-top: -2px;
-      font-size: 18px;
-      font-family: "MD-System", sans-serif;
-      font-weight: 900;
-      color: black;
-
-      @media only screen and (max-width: 1098px) {
-        margin-top: $mp;
-        margin-bottom: 0;
-      }
-    }
-    
-    &__desc {
-        a {
-          text-decoration: underline;
-        }
-    }
-
-    &__links,
-    &__desc {
       padding-top: 0;
       font-size: 18px;
-      color: black;
       font-weight: 200;
-
-      * { color: black; }
-
-      @media only screen and (max-width: 1098px) {
-        padding-right: 20%;
-      }
-
-      @media only screen and (max-width: 588px) {
-        padding-right: 0;
-      }
-
+      color: black;
 
       // typografy stuff
       blockquote {
@@ -247,15 +148,18 @@ $mp: 24px;
         margin: 0;
       }
 
+      a {
+        text-decoration: underline;
+      }
+
       p {
         margin-top: 0;
       }
 
-
       hr {
         border-top: 1px solid black;
         margin-top: 38px;
-        margin-bottom: 10px;
+        margin: 40px 0;
       }
 
       h4 {
@@ -264,39 +168,18 @@ $mp: 24px;
         font-size: inherit;
         color: black;
       }
-    }
-
-    &__links {
-      font-size: 14px;
-      position: absolute;
-      bottom: 0;
-      transition: 0.2s;
 
       @media only screen and (max-width: 1098px) {
+        width: 100%;
         position: relative;
-        margin-top: 20px;
+        margin-top: 30px;
+        padding-right: 20%;
       }
 
-      p {
-        margin: 0;
+      @media only screen and (max-width: 588px) {
+        padding-right: 0;
       }
-
-      a {
-        text-decoration: none !important;
-      }
-    }
-  }
-
-  .content-blocks {
-  }
-
-  .block {
-    margin-bottom: $mp;
-
-    &:last-of-type {
-      margin-bottom: $mp * 2;
     }
   }
 }
-
 </style>
