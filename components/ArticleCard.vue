@@ -8,19 +8,11 @@
     <template v-if="imgExt === '.jpg' || imgExt === '.jpeg' || imgExt === '.png' || imgExt === '.gif'">
 
       <!-- IF IMAGE SMALL -->
-      <template v-if="article.image.formats.small">
+      <template v-if="article.image">
         <img
             @load="onImageLoad"
-            :src="getStrapiMedia(article.image.formats.small.url)"
+            :src="getStrapiMedia(article.image.url)"
             alt="">
-      </template>
-
-      <!-- IF NO IMAGE SMALL -->
-      <template v-else>
-        <img
-          @load="onImageLoad"
-          :src="getStrapiMedia(article.image.url)"
-          alt="">
       </template>
       
     </template>

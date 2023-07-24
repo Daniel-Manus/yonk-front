@@ -10,14 +10,7 @@
       
       <div class="heading">
         <div class="heading__image">
-
-          <template v-if="article.headerimage.formats.large">
-            <img :src="getStrapiMedia(article.headerimage.formats.large.url)" alt="">
-          </template>
-          <template v-else>
-            <img :src="getStrapiMedia(article.headerimage.url)" alt="">
-          </template>
-
+          <img :src="getStrapiMedia(article.headerimage.url)" alt="">
         </div>
 
         <div class="heading__content">

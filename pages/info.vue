@@ -6,7 +6,7 @@
       <div class="heading">
         <div v-if="global.info_image" class="heading__image">
           <img
-            :src="getStrapiMedia(global.info_image.formats.large.url)"
+            :src="getStrapiMedia(global.info_image.url)"
             alt=""
           />
         </div>

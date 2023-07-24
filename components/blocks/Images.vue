@@ -7,33 +7,18 @@
 
           <!-- IF 1 IMAGE -->
           <template v-if="block.images.length == 1">
-
-              <!-- <template v-if="img.formats.large"> -->
-                <!-- <img :src="getStrapiMedia(img.formats.large.url)" alt=""> -->
-              <!-- </template> -->
-              <!-- <template v-else> -->
                 <img :src="getStrapiMedia(img.url)" alt="">
-              <!-- </template> -->
-
           </template>
 
           <!-- IF 2 OR MORE IMAGES -->
           <template v-if="block.images.length >= 2">
-            <template v-if="img.formats.medium">
-              <img :src="getStrapiMedia(img.formats.medium.url)" alt="">
-            </template>
-            <template v-else>
               <img :src="getStrapiMedia(img.url)" alt="">
-            </template>
           </template>
-
         </template>
-
 
         <template v-if="img.ext === '.fbx'">
           <ThreeDee :model="img" />
         </template>
-
 
       </div>
 
