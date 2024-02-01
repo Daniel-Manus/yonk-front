@@ -4,19 +4,19 @@
       <!-- eslint-disable vue/no-v-html -->
 
       <div class="heading">
-        <div v-if="global.info_image" class="heading__media">
+        <div class="heading__media">
 
           <!-- if image -->
           <img
             v-if="global.info_media_1 && global.info_media_1.ext === '.jpg' || global.info_media_1.ext === '.png'"
             :src="getStrapiMedia(global.info_media_1.url)"
-            class="heading__media--bottom"
+            class="heading__media--top"
             alt=""
           />
 
           <video
             v-if="global.info_media_1 && global.info_media_1.ext === '.mp4'"
-            class="heading__media--bottom"
+            class="heading__media--top"
             autoplay muted>
             <source :src="getStrapiMedia(global.info_media_1.url)" type="video/mp4">
             Your browser does not support the video tag.
