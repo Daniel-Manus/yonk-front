@@ -19,9 +19,6 @@
           <nuxt-link class="" to="/info">
             Info
           </nuxt-link>
-          <a href="https://www.google.com" target="_blank" class="header__link inactive">
-            Store
-          </a>
         </div>
 
       </div>
@@ -118,11 +115,6 @@ body {
     cursor: pointer;
     transition: 0s;
     margin-left: 24px;
-
-    &.inactive {
-      text-decoration: line-through;
-      pointer-events: none;
-    }
 
     &:hover {
       color: $hl;
