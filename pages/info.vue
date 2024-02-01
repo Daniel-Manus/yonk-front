@@ -4,11 +4,43 @@
       <!-- eslint-disable vue/no-v-html -->
 
       <div class="heading">
-        <div v-if="global.info_image" class="heading__image">
+        <div v-if="global.info_image" class="heading__media">
+
+          <!-- if image -->
           <img
-            :src="getStrapiMedia(global.info_image.url)"
+            v-if="global.info_media_1 && global.info_media_1.ext === '.jpg' || global.info_media_1.ext === '.png'"
+            :src="getStrapiMedia(global.info_media_1.url)"
+            class="heading__media--bottom"
             alt=""
           />
+
+          <video
+            v-if="global.info_media_1 && global.info_media_1.ext === '.mp4'"
+            class="heading__media--bottom"
+            autoplay muted>
+            <source :src="getStrapiMedia(global.info_media_1.url)" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+
+          <!-- if video -->
+
+          <!-- space -->
+
+          <img
+            v-if="global.info_media_2 && global.info_media_2.ext === '.jpg' || global.info_media_2.ext === '.png'"
+            :src="getStrapiMedia(global.info_media_2.url)"
+            class="heading__media--bottom"
+            alt=""
+          />
+
+          <video
+            v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
+            class="heading__media--bottom"
+            autoplay muted>
+            <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+          
         </div>
 
         <div class="heading__content">
@@ -21,6 +53,23 @@
             v-html="$md.render(global.info_description_2)"
           />
         </div>
+
+        <!-- 2nd info_media on the bottom only for mobile -->
+        <img
+          v-if="global.info_media_2 && global.info_media_2.ext === '.jpg' || global.info_media_2.ext === '.png'"
+          :src="getStrapiMedia(global.info_media_2.url)"
+          class="heading__media--mobile"
+          alt=""
+        />
+
+        <video
+            v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
+            class="heading__media--mobile"
+            autoplay muted>
+            <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+
       </div>
     </div>
   </div>
@@ -108,7 +157,7 @@ $mp: 24px;
       white-space: normal;
     }
 
-    &__image,
+    &__media,
     &__content {
       display: inline-block;
       width: 49.4%;
@@ -116,14 +165,28 @@ $mp: 24px;
       box-sizing: border-box;
     }
 
-    &__image {
+    &__media {
       width: calc(66%);
       margin-right: $mp;
-      background: rgb(0, 0, 0, 1);
 
       @media only screen and (max-width: 1098px) {
         width: 100%;
         padding-right: 0;
+      }
+
+      &--bottom {
+        margin-top: $mp;
+
+        @media only screen and (max-width: 1098px) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+        @media only screen and (max-width: 1098px) {
+          display: block;
+        }
       }
 
       img {
