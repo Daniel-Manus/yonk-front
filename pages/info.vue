@@ -17,7 +17,7 @@
           <video
             v-if="global.info_media_1 && global.info_media_1.ext === '.mp4'"
             class="heading__media--top"
-            autoplay muted>
+            autoplay muted loop>
             <source :src="getStrapiMedia(global.info_media_1.url)" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
@@ -36,7 +36,7 @@
           <video
             v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
             class="heading__media--bottom"
-            autoplay muted>
+            autoplay muted loop>
             <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
@@ -64,11 +64,10 @@
 
         <video
             v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
-            class="heading__media--mobile"
-            autoplay muted>
+            class="heading__media--mobile" muted controls>
             <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
             Your browser does not support the video tag.
-          </video> 
+          </video>
 
       </div>
     </div>
