@@ -1,4 +1,4 @@
-const strapiBaseUri = process.env.API_URL || "http://localhost:1337";
+const strapiBaseUri = "https://yonk-back.herokuapp.com";
 
 export default {
   target: "static",

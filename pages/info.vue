@@ -64,6 +64,11 @@
           Your browser does not support the video tag.
         </video>
 
+        <Video :block="{
+          id: 'lol',
+          video: global.info_media_2
+        }" />
+
       </div>
     </div>
   </div>
@@ -72,10 +77,14 @@
 <script>
 import moment from "moment";
 import { getStrapiMedia } from "../utils/medias";
+import Video from "../components/blocks/Video.vue";
+
 // import { getMetaTags } from "../utils/seo";
 
 export default {
-  components: {},
+  components: {
+    Video
+  },
   async asyncData({ $strapi }) {
     return {
       // articles: await $strapi.find("articles"),
