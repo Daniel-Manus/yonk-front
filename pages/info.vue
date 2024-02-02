@@ -59,7 +59,7 @@
 
         <video
           v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
-          class="heading__media--mobile" muted controls>
+          class="heading__media--mobile" muted controls preload="none">
           <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
           Your browser does not support the video tag.
         </video>
