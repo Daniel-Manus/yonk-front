@@ -143,8 +143,7 @@ $mp: 24px;
   margin-top: 84px;
 
   .heading {
-    //margin-top: 90px;
-    margin-top: $mp * 4.5;
+    margin-top: 79px;
     margin-bottom: $mp * 2;
     position: relative;
     color: black;
