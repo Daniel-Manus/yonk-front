@@ -105,7 +105,6 @@ export default {
 <style lang="scss">
 
   .masonry-grid {
-    // background: lightgray;
     margin-bottom: 10px;
     margin-top: 79px;
 
