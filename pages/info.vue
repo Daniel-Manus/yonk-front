@@ -57,17 +57,21 @@
           alt=""
         />
 
-        <video
+        <!-- <video
           v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
           class="heading__media--mobile" muted controls preload="true" autobuffer="true">
           <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
 
-        <Video :block="{
-          id: 'lol',
-          video: global.info_media_2
-        }" />
+        <div class="heading__media--mobile">
+          <Video 
+            v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
+            :block="{
+              id: 'info-vid',
+              video: global.info_media_2
+          }" />
+        </div>
 
       </div>
     </div>
