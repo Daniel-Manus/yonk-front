@@ -6,7 +6,7 @@
       <div class="heading">
         <div class="heading__media">
 
-          <!-- if image -->
+          <!-- INFO IMAGE/VIDEO 1 -->
           <img
             v-if="global.info_media_1 && global.info_media_1.ext === '.jpg' || global.info_media_1.ext === '.png'"
             :src="getStrapiMedia(global.info_media_1.url)"
@@ -16,16 +16,12 @@
 
           <video
             v-if="global.info_media_1 && global.info_media_1.ext === '.mp4'"
-            class="heading__media--top"
-            autoplay muted loop>
+            class="heading__media--top" muted loop>
             <source :src="getStrapiMedia(global.info_media_1.url)" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
 
-          <!-- if video -->
-
-          <!-- space -->
-
+          <!-- INFO IMAGE/VIDEO 2 -->
           <img
             v-if="global.info_media_2 && global.info_media_2.ext === '.jpg' || global.info_media_2.ext === '.png'"
             :src="getStrapiMedia(global.info_media_2.url)"
@@ -35,8 +31,7 @@
 
           <video
             v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
-            class="heading__media--bottom"
-            autoplay muted loop>
+            class="heading__media--bottom" muted loop>
             <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
             Your browser does not support the video tag.
           </video> 
@@ -54,7 +49,7 @@
           />
         </div>
 
-        <!-- 2nd info_media on the bottom only for mobile -->
+        <!-- INFO IMAGE/VIDEO 2 (MOBILE ONLY) -->
         <img
           v-if="global.info_media_2 && global.info_media_2.ext === '.jpg' || global.info_media_2.ext === '.png'"
           :src="getStrapiMedia(global.info_media_2.url)"
@@ -62,12 +57,12 @@
           alt=""
         />
 
-        <!-- <video
+        <video
           v-if="global.info_media_2 && global.info_media_2.ext === '.mp4'"
-          class="heading__media--mobile" autoplay="false" muted controls>
+          class="heading__media--mobile" muted controls>
           <source :src="getStrapiMedia(global.info_media_2.url)" type="video/mp4">
           Your browser does not support the video tag.
-        </video> -->
+        </video>
 
       </div>
     </div>
