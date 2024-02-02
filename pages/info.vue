@@ -99,6 +99,13 @@ export default {
         link.setAttribute("target", "_blank");
       });
     }
+
+    if (window && window.innerWidth > 1098) {
+      let videos = document.querySelectorAll('video')
+      videos.forEach(video => {
+        video.play()
+      })
+    }
   },
   methods: {
     moment,
