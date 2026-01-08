@@ -32,9 +32,21 @@
         <div class="footer__link">info@yonk.online</div>
       </div>
       <div class="footer__links right">
-        <a class="footer__link" href="https://www.instagram.com/yonk.online/" target="_blank">Instagram</a>
-        <a class="footer__link" href="https://twitter.com/yonkonline" target="_blank">Twitter</a>
-        <a class="footer__link" href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw" target="_blank">Youtube</a>
+        <a
+          class="footer__link"
+          href="https://www.instagram.com/yonk.online/"
+          target="_blank"
+          >Instagram</a
+        >
+        <a class="footer__link" href="https://x.com/yonkonline" target="_blank"
+          >X</a
+        >
+        <a
+          class="footer__link"
+          href="https://www.youtube.com/channel/UCeVIE2HS9uqD5cS0FrOapzw"
+          target="_blank"
+          >Youtube</a
+        >
       </div>
     </div>
   </div>
